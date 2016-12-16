@@ -29,8 +29,6 @@ fun main(args: Array<String>) {
         }
     } else {
         println("unsupported function")
-        println("arg1: -a [ASTAR] | -l [LSSLRTASTAR]")
-        println("arg2: -s [SAFETY_FLAG]")
     }
 
     val domain = readDomain(Scanner(System.`in`))
