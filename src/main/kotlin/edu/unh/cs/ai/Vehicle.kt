@@ -18,7 +18,7 @@ enum class Action{
 }
 
 fun isGoal(state: State) : Boolean {
-    return false
+    return state.agentX == state.goalX && state.agentY == state.goalY
 }
 
 fun successors(state: State) : ArrayList<Node> {

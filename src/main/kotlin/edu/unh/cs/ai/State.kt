@@ -8,9 +8,11 @@ package edu.unh.cs.ai
 
 import java.util.*
 
+val random = Random()
+
 data class Pair(val x: Int, val y: Int)
 data class State(val width: Int, val height: Int, val agentX: Int, val agentY: Int, val goalX: Int,
-                 val goalY: Int, val obstacles: ArrayList<Pair>, val bunkers: ArrayList<Pair>)
+                 val goalY: Int, val obstacles: ArrayList<Pair>, val obstacleVels: ArrayList<Pair>, val bunkers: ArrayList<Pair>)
 
 fun readDomain(input: Scanner): State {
     val width = input.nextInt()
@@ -45,7 +47,14 @@ fun readDomain(input: Scanner): State {
         ++row
         col = 0
     }
-    return State(width, height, agentX, agentY, goalX, goalY, obstacles, bunkers)
+    val obstacleVels = ArrayList<Pair>()
+    obstacles.forEach {
+        val xVel = random.nextInt(3)
+        val yVel = random.nextInt(3)
+        obstacleVels.add(Pair(xVel, yVel))
+    }
+
+    return State(width, height, agentX, agentY, goalX, goalY, obstacles, obstacleVels, bunkers)
 }
 
 fun heuristic(state: State): Double {

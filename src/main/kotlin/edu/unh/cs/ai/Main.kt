@@ -9,14 +9,13 @@ import java.io.File
 import java.util.*
 
 fun main(args: Array<String>) {
-
     println("Safe Real-Time Search")
     println("arg1: -a [ASTAR] | -l [LSSLRTASTAR]")
     println("arg2: -s [SAFETY_FLAG]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
     val startState = readDomain(Scanner(File("./input/vehicle/vehicle0.v")))
     val startNode = Node(null, startState, Action.START, 0.0, 0.0+heuristic(startState))
-
+    print(startState)
     if (args.size == 1) {
         if (args[0] == "-a") {
             /** TODO:: run a* */
