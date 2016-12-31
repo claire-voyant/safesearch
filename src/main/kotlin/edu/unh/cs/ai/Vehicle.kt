@@ -13,7 +13,8 @@ enum class Action{
     EAST,
     SOUTH,
     WEST,
-    WAIT
+    WAIT,
+    START
 }
 
 fun isGoal(state: State) : Boolean {
