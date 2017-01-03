@@ -6,7 +6,7 @@ package edu.unh.cs.ai
  */
 
 fun validStateTest(node: Node) : Boolean {
-    println("validStateTest")
+    println("validStateTest and successorTest")
     visualize(node.state)
     var success = true
     if(!validState(node.state)) {
@@ -15,10 +15,20 @@ fun validStateTest(node: Node) : Boolean {
     val successors = successors(node.state)
     successors.forEach {
         println("\tVisualzing successors...")
+        println("\t${it.action}")
         if(!validState(it.state)) {
             success = false
         }
         visualize(it.state)
+        val nextSuccessors = successors(it.state)
+        nextSuccessors.forEach {
+            println("\t\tVisualizing successor of successors...")
+            println("\t\t${it.action}")
+            if(!validState(it.state)) {
+                success = false
+            }
+            visualize(it.state)
+        }
     }
     return success
 }

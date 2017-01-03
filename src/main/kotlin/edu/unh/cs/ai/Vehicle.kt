@@ -119,4 +119,5 @@ fun visualize(state: State): Unit {
         }
         println()
     }
+    println()
 }

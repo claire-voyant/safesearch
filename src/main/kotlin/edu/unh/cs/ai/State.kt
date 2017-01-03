@@ -49,8 +49,8 @@ fun readDomain(input: Scanner): State {
     }
     val obstacleVels = ArrayList<Pair>()
     obstacles.forEach {
-        val xVel = random.nextInt(3)
-        val yVel = random.nextInt(3)
+        val xVel = random.nextInt(1) + 1
+        val yVel = random.nextInt(1) + 1
         val coin = random.nextBoolean()
         obstacleVels.add(Pair(if(coin){xVel} else {0}, if(!coin) {yVel} else {0}))
     }

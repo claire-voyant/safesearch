@@ -13,15 +13,17 @@ fun main(args: Array<String>) {
     println("arg1: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]")
     println("arg2: -s [SAFETY_FLAG]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
-    val startState = readDomain(Scanner(File("./input/vehicle/vehicle0.v")))
+    val startState = readDomain(Scanner(File("./input/vehicle/simple.v")))
     val startNode = Node(null, startState, Action.START, 0.0, 0.0 + heuristic(startState))
     if (args.size == 1) {
         if (args[0] == "-a") {
-            /** TODO:: run a* */
+            val actions = astar(startNode)
+            showActions(actions)
         } else if (args[0] == "-l") {
             /** TODO:: run lssrta* */
         } else if (args[0] == "-T") {
             println("Running tests....")
+            println("Printing start state \n\t$startState...")
             runTests(startNode)
         } else {
             print(args[0])
@@ -34,5 +36,10 @@ fun main(args: Array<String>) {
     } else {
         println("unsupported function")
     }
+}
 
+fun showActions(actions: ArrayList<Action>) : Unit {
+    actions.forEach {
+        println("\t $it")
+    }
 }

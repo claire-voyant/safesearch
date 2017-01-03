@@ -7,7 +7,17 @@ import java.util.*
  * Created by doylew on 12/16/16.
  */
 
-data class Node(var parent: Node?, val state: State, var action: Action, var g: Double, var f: Double)
+data class Node(var parent: Node?, val state: State, var action: Action, var g: Double, var f: Double) : Comparable<Node> {
+    override fun compareTo(other: Node): Int {
+        if(parent == other.parent && state == other.state && action == other.action && g == other.g && f == other.f) {
+            return 0
+        } else if (parent == other.parent && state == other.state && action == other.action && f < other.f) {
+            return -1
+        } else {
+            return 1
+        }
+    }
+}
 
 var nodesGenerated = 0
 var nodesExpanded = 0
