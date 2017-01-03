@@ -34,6 +34,8 @@ fun astar(start: Node): ArrayList<Action> {
     while (queue.isNotEmpty()) {
         nodesExpanded++
         val currentNode = queue.poll()
+        println("visualizing currentNode")
+        visualize(currentNode.state)
 
         if (isGoal(currentNode.state)) {
             return computeActions(currentNode, startState)
@@ -41,6 +43,8 @@ fun astar(start: Node): ArrayList<Action> {
 
         successors(currentNode.state).forEach {
             if (it.state != currentNode.state) {
+                println("visualizing successor")
+                visualize(it.state)
 
                 val newCost = 1 + currentNode.g
                 val successorNode = Node(currentNode, it.state, it.action, newCost, newCost + heuristic(it.state))

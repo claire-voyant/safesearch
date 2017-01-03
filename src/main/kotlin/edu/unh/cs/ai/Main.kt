@@ -13,7 +13,9 @@ fun main(args: Array<String>) {
     println("arg1: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]")
     println("arg2: -s [SAFETY_FLAG]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
-    val startState = readDomain(Scanner(File("./input/vehicle/simple.v")))
+    val startState = readDomain(Scanner(File("./input/vehicle/small.v")))
+    println("Given problem: ")
+    visualize(startState)
     val startNode = Node(null, startState, Action.START, 0.0, 0.0 + heuristic(startState))
     if (args.size == 1) {
         if (args[0] == "-a") {

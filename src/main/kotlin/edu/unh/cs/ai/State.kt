@@ -10,9 +10,62 @@ import java.util.*
 
 val random = Random()
 
-data class Pair(val x: Int, val y: Int)
+data class Pair(val x: Int, val y: Int) {
+    override fun equals(other: Any?): Boolean {
+        if (other is Pair) {
+            if (other.x == x && other.y == y) {
+                return true
+            }
+        }
+        return false
+    }
+
+    override fun hashCode(): Int {
+        return x xor y
+    }
+}
+
 data class State(val width: Int, val height: Int, var agentX: Int, var agentY: Int, val goalX: Int,
-                 val goalY: Int, val obstacles: ArrayList<Pair>, val obstacleVels: ArrayList<Pair>, val bunkers: ArrayList<Pair>)
+                 val goalY: Int, val obstacles: ArrayList<Pair>, val obstacleVels: ArrayList<Pair>, val bunkers: ArrayList<Pair>) {
+    override fun equals(other: Any?): Boolean {
+        if (other is State) {
+            if (other.agentX == agentX && other.agentY == agentY) {
+                /** same agent location*/
+                if (other.goalX == other.goalY) {
+                    /** same goal location*/
+                    var validateObstacles = true
+                    /** same obstacle locations*/
+                    var validateVels = true
+                    /** same obstacle velocities*/
+                    other.obstacles.forEach { otherObstacle ->
+                        obstacles.forEach { obstacle ->
+                            if (obstacle != otherObstacle) {
+                                validateObstacles = false
+                            }
+                        }
+                    }
+                    other.obstacleVels.forEach { otherVel ->
+                        obstacleVels.forEach { vel ->
+                            if (otherVel != vel) {
+                                validateVels = false
+                            }
+                        }
+                    }
+                    return validateObstacles && validateVels
+                }
+            }
+        }
+        return false
+    }
+
+    override fun hashCode(): Int {
+        var obstacleHash = 0
+        obstacles.forEach {
+            obstacleHash = obstacleHash xor it.x xor it.y
+        }
+        return obstacleHash xor agentX xor agentY
+    }
+}
 
 fun readDomain(input: Scanner): State {
     val width = input.nextInt()
@@ -52,7 +105,15 @@ fun readDomain(input: Scanner): State {
         val xVel = random.nextInt(1) + 1
         val yVel = random.nextInt(1) + 1
         val coin = random.nextBoolean()
-        obstacleVels.add(Pair(if(coin){xVel} else {0}, if(!coin) {yVel} else {0}))
+        obstacleVels.add(Pair(if (coin) {
+            xVel
+        } else {
+            0
+        }, if (!coin) {
+            yVel
+        } else {
+            0
+        }))
     }
 
     return State(width, height, agentX, agentY, goalX, goalY, obstacles, obstacleVels, bunkers)
