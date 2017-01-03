@@ -11,7 +11,7 @@ import java.util.*
 val random = Random()
 
 data class Pair(val x: Int, val y: Int)
-data class State(val width: Int, val height: Int, val agentX: Int, val agentY: Int, val goalX: Int,
+data class State(val width: Int, val height: Int, var agentX: Int, var agentY: Int, val goalX: Int,
                  val goalY: Int, val obstacles: ArrayList<Pair>, val obstacleVels: ArrayList<Pair>, val bunkers: ArrayList<Pair>)
 
 fun readDomain(input: Scanner): State {

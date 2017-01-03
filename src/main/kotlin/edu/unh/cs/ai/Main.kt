@@ -14,13 +14,16 @@ fun main(args: Array<String>) {
     println("arg2: -s [SAFETY_FLAG]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
     val startState = readDomain(Scanner(File("./input/vehicle/vehicle0.v")))
-    val startNode = Node(null, startState, Action.START, 0.0, 0.0+heuristic(startState))
+    val startNode = Node(null, startState, Action.START, 0.0, 0.0 + heuristic(startState))
     print(startState)
     if (args.size == 1) {
         if (args[0] == "-a") {
             /** TODO:: run a* */
         } else if (args[0] == "-l") {
             /** TODO:: run lssrta* */
+        } else if (args[0] == "-T") {
+            println("Running tests....")
+            runTests(startNode)
         } else {
             print(args[0])
             println(" not recognized/implemented")

@@ -8,7 +8,9 @@ import java.util.*
  * Created by doylew on 12/30/16.
  */
 
-enum class Action{
+val invalidState = State(-1, -1, -1, -1, -1, -1, ArrayList<Pair>(), ArrayList<Pair>(), ArrayList<Pair>())
+
+enum class Action {
     NORTH,
     EAST,
     SOUTH,
@@ -17,11 +19,80 @@ enum class Action{
     START
 }
 
-fun isGoal(state: State) : Boolean {
+fun isGoal(state: State): Boolean {
     return state.agentX == state.goalX && state.agentY == state.goalY
 }
 
-fun successors(state: State) : ArrayList<Node> {
+fun moveObstacles(obstacles: ArrayList<Pair>, vels: ArrayList<Pair>, width: Int, height: Int): ArrayList<Pair> {
+    val newObstacles = ArrayList<Pair>()
+    obstacles.forEachIndexed { i, pair ->
+        var xPos = pair.x
+        var yPos = pair.y
+        if (pair.x + vels[i].x < width && pair.x + vels[i].x >= 0) {
+            xPos = pair.x + vels[i].x
+        }
+        if (pair.y + vels[i].y < height && pair.y + vels[i].y >= 0) {
+            yPos = pair.y + vels[i].y
+        }
+        newObstacles.add(Pair(xPos, yPos))
+    }
+    return newObstacles
+}
 
-    return ArrayList<Node>()
+fun transition(state: State, action: Action): State {
+    val movedObstacles = moveObstacles(state.obstacles, state.obstacleVels, state.width, state.height)
+    val candidateState = State(state.width, state.height, state.agentX, state.agentY, state.goalX, state.goalY, movedObstacles, state.obstacleVels, state.bunkers)
+    if (action == Action.NORTH) {
+        candidateState.agentY -= 1
+        if (validState(candidateState)) {
+            return candidateState
+        }
+    } else if (action == Action.EAST) {
+        candidateState.agentX += 1
+        if (validState(candidateState)) {
+            return candidateState
+        }
+    } else if (action == Action.SOUTH) {
+        candidateState.agentY += 1
+        if (validState(candidateState)) {
+            return candidateState
+        }
+    } else if (action == Action.WEST) {
+        candidateState.agentX -= 1
+        if (validState(candidateState)) {
+            return candidateState
+        }
+    } else if (action == Action.WAIT) {
+        if (validState(candidateState)) {
+            return candidateState
+        }
+    }
+    return invalidState
+}
+
+fun validState(state: State): Boolean {
+    if (state.agentX >= 0 && state.agentX < state.width) {
+        if (state.agentY >= 0 && state.agentY < state.height) {
+            var obstacleCheck = true
+            state.obstacles.forEach {
+                if (it.x == state.agentX && it.y == state.agentY) {
+                    obstacleCheck = false
+                }
+            }
+            return obstacleCheck
+        }
+    }
+    return false
+}
+
+fun successors(state: State): ArrayList<Node> {
+    val successors = ArrayList<Node>()
+    val possibleActions = ArrayList<Action>(Action.values().asList())
+    possibleActions.forEach {
+        val candidateSuccessor = transition(state, it)
+        if (invalidState != candidateSuccessor) {
+            successors.add(Node(null, candidateSuccessor, it, 0.0, 0.0))
+        }
+    }
+    return successors
 }
