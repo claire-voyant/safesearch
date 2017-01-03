@@ -23,7 +23,7 @@ fun isGoal(state: State): Boolean {
     return state.agentX == state.goalX && state.agentY == state.goalY
 }
 
-fun moveObstacles(obstacles: ArrayList<Pair>, vels: ArrayList<Pair>, width: Int, height: Int): ArrayList<Pair> {
+fun moveObstacles(obstacles: ArrayList<Pair>, vels: ArrayList<Pair>, width: Int, height: Int, bunkers: ArrayList<Pair>): ArrayList<Pair> {
     val newObstacles = ArrayList<Pair>()
     obstacles.forEachIndexed { i, pair ->
         var xPos = pair.x
@@ -34,13 +34,18 @@ fun moveObstacles(obstacles: ArrayList<Pair>, vels: ArrayList<Pair>, width: Int,
         if (pair.y + vels[i].y < height && pair.y + vels[i].y >= 0) {
             yPos = pair.y + vels[i].y
         }
-        newObstacles.add(Pair(xPos, yPos))
+        if (!bunkers.contains(Pair(xPos, yPos))) {
+            newObstacles.add(Pair(xPos, yPos))
+        } else {
+            vels[i] = Pair(vels[i].x * -1, vels[i].y * -1 )
+            newObstacles.add(Pair(pair.x, pair.y))
+        }
     }
     return newObstacles
 }
 
 fun transition(state: State, action: Action): State {
-    val movedObstacles = moveObstacles(state.obstacles, state.obstacleVels, state.width, state.height)
+    val movedObstacles = moveObstacles(state.obstacles, state.obstacleVels, state.width, state.height, state.bunkers)
     val candidateState = State(state.width, state.height, state.agentX, state.agentY, state.goalX, state.goalY, movedObstacles, state.obstacleVels, state.bunkers)
     if (action == Action.NORTH) {
         candidateState.agentY -= 1
@@ -95,4 +100,23 @@ fun successors(state: State): ArrayList<Node> {
         }
     }
     return successors
+}
+
+fun visualize(state: State): Unit {
+    (0..state.height - 1).forEach { y ->
+        (0..state.width - 1).forEach { x ->
+            if (x == state.agentX && y == state.agentY) {
+                print('@')
+            } else if (x == state.goalX && y == state.goalY) {
+                print('*')
+            } else if (state.obstacles.contains(Pair(x, y))) {
+                print('#')
+            } else if (state.bunkers.contains(Pair(x, y))) {
+                print('$')
+            } else {
+                print('_')
+            }
+        }
+        println()
+    }
 }

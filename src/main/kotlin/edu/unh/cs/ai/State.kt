@@ -51,7 +51,8 @@ fun readDomain(input: Scanner): State {
     obstacles.forEach {
         val xVel = random.nextInt(3)
         val yVel = random.nextInt(3)
-        obstacleVels.add(Pair(xVel, yVel))
+        val coin = random.nextBoolean()
+        obstacleVels.add(Pair(if(coin){xVel} else {0}, if(!coin) {yVel} else {0}))
     }
 
     return State(width, height, agentX, agentY, goalX, goalY, obstacles, obstacleVels, bunkers)
