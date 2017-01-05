@@ -16,6 +16,7 @@ fun validStateTest(node: Node) : Boolean {
     successors.forEach {
         println("\tVisualzing successors...")
         println("\t${it.action}")
+        println(it)
         if(!validState(it.state)) {
             success = false
         }
@@ -24,6 +25,7 @@ fun validStateTest(node: Node) : Boolean {
         nextSuccessors.forEach {
             println("\t\tVisualizing successor of successors...")
             println("\t\t${it.action}")
+            println(it)
             if(!validState(it.state)) {
                 success = false
             }

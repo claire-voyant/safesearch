@@ -37,7 +37,7 @@ fun moveObstacles(obstacles: ArrayList<Pair>, vels: ArrayList<Pair>, width: Int,
         if (!bunkers.contains(Pair(xPos, yPos))) {
             newObstacles.add(Pair(xPos, yPos))
         } else {
-            vels[i] = Pair(vels[i].x * -1, vels[i].y * -1 )
+            vels[i] = Pair(vels[i].x * -1, vels[i].y * -1)
             newObstacles.add(Pair(pair.x, pair.y))
         }
     }
@@ -96,7 +96,7 @@ fun successors(state: State): ArrayList<Node> {
     possibleActions.forEach {
         val candidateSuccessor = transition(state, it)
         if (invalidState != candidateSuccessor) {
-            successors.add(Node(null, candidateSuccessor, it, 0.0, 0.0))
+            successors.add(Node(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0))
         }
     }
     return successors

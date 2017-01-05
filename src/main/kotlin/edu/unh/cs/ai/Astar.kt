@@ -8,6 +8,7 @@ import kotlin.system.measureTimeMillis
  * Created by doylew on 12/16/16.
  */
 data class Edge(val node: Node, val action: Action)
+
 data class ActionBundle(val action: Action, val cost: Double)
 data class Node(var parent: Node?, val state: State, var action: Action, var g: Double,
                 var f: Double, var open: Boolean, var iteration: Int, var heuristic: Double) : Comparable<Node>, Indexable {
@@ -52,7 +53,7 @@ private val heuristicComparator = Comparator<Node> { lhs, rhs ->
 var nodesGenerated = 0
 var nodesExpanded = 0
 var iterationCounter = 0
-private var rootState : State? = null
+private var rootState: State? = null
 private var aStarPopCounter = 0
 private var dijkstraPopCounter = 0
 private var aStarTimer = 0L
@@ -68,10 +69,10 @@ fun initializeAStar(): Unit {
     openList.clear()
 }
 
-private val maximumIterations = 10
+var maximumIterations = 10
 
-fun reachedTermination() : Boolean {
-    if(iterationCounter == maximumIterations) {
+fun reachedTermination(): Boolean {
+    if (iterationCounter == maximumIterations) {
         return true
     }
     return false
@@ -86,10 +87,10 @@ fun aStar(start: State): Node {
     nodes[startState] = node
     var currentNode = node
     addToOpenList(node)
-    println("Beginning A* from $startState")
+//    println("Beginning A* from $startState")
 
     val expandedNodes = measureInt({ nodesExpanded }) {
-        while (reachedTermination() && isGoal(currentNode.state)) {
+        while (!reachedTermination() && !isGoal(currentNode.state)) {
             aStarPopCounter++
             currentNode = popOpenList()
             expandNode(currentNode)
@@ -99,9 +100,9 @@ fun aStar(start: State): Node {
     if (node == currentNode && !isGoal(currentNode.state)) {
         //            throw InsufficientTerminationCriterionException("Not enough time to expand even one node")
     } else {
-        println( "A* : expanded $expandedNodes nodes" )
+//        println("A* : expanded $expandedNodes nodes")
     }
-    println( "Done with AStar at $currentNode" )
+//    println("Done with AStar at $currentNode")
 
     return currentNode
 }
@@ -130,8 +131,8 @@ fun expandNode(sourceNode: Node) {
     nodesExpanded++
     val currentGValue = sourceNode.g
     successors(sourceNode.state).forEach { successor ->
-        val successorState = sourceNode.state
-        println("Expanding $successorState")
+        val successorState = successor.state
+//        println("Expanding $successorState")
         val successorNode = getNode(sourceNode, successor)
         successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
         if (successorNode.iteration != iterationCounter) {
@@ -153,8 +154,8 @@ fun expandNode(sourceNode: Node) {
                     action = successor.action
                 }
 
-                println("Expanding from $sourceNode --> $successorState :: open list size: ${openList.size}")
-                println("Adding it to to cost table with value ${successorNode.g}")
+//                println("Expanding from $sourceNode --> $successorState :: open list size: ${openList.size}")
+//                println("Adding it to to cost table with value ${successorNode.g}")
 
                 if (!successorNode.open) {
                     addToOpenList(successorNode) // Fresh node not on the open yet
@@ -205,7 +206,7 @@ private fun addToOpenList(node: Node) {
 }
 
 private fun clearOpenList() {
-    println("Clear open list")
+//    println("Clear open list")
     openList.applyAndClear {
         it.open = false
     }
@@ -218,7 +219,7 @@ inline fun measureInt(property: () -> Int, block: () -> Unit): Int {
 }
 
 private fun dijkstra() {
-    println( "Start: Dijkstra" )
+//    println("Start: Dijkstra")
     // Invalidate the current heuristic value by incrementing the counter
     iterationCounter++
     // change openList ordering to heuristic only`
@@ -252,7 +253,7 @@ private fun dijkstra() {
                 assert(predecessorNode.iteration == iterationCounter - 1)
                 predecessorNode.iteration = iterationCounter
                 addToOpenList(predecessorNode)
-            } else if (predecessorHeuristicValue > currentHeuristicValue + 1){
+            } else if (predecessorHeuristicValue > currentHeuristicValue + 1) {
                 // This node was visited in this learning phase, but the current path is better then the previous
                 predecessorNode.heuristic = currentHeuristicValue + 1
                 openList.update(predecessorNode) // Update priority
@@ -265,9 +266,9 @@ private fun dijkstra() {
     }
     // update mode if done
     if (openList.isEmpty()) {
-        println( "Done with Dijkstra" )
+//        println("Done with Dijkstra")
     } else {
-        println("Incomplete learning step. Lists: Open(${openList.size})")
+//        println("Incomplete learning step. Lists: Open(${openList.size})")
     }
 }
 
@@ -275,7 +276,7 @@ private fun extractPlan(targetNode: Node, sourceState: State): List<ActionBundle
     val actions = ArrayList<ActionBundle>(1000)
     var currentNode = targetNode
 
-    println("Extracting plan" )
+//    println("Extracting plan")
 
     if (targetNode.state == sourceState) {
         return emptyList()
@@ -283,10 +284,10 @@ private fun extractPlan(targetNode: Node, sourceState: State): List<ActionBundle
     // keep on pushing actions to our queue until source state (our root) is reached
     do {
         actions.add(ActionBundle(currentNode.action, currentNode.g))
-        currentNode = currentNode.parent!!
+        currentNode = currentNode?.parent!!
     } while (currentNode.state != sourceState)
 
-    println( { "Plan extracted" })
+//    println({ "Plan extracted" })
     return actions.reversed()
 
 }
@@ -297,14 +298,14 @@ fun selectAction(state: State): List<ActionBundle> {
         rootState = state
     } else if (state != rootState) {
         // The given state should be the last target
-        println("Inconsistent world state. Expected $rootState got $state" )
+//        println("Inconsistent world state. Expected $rootState got $state")
     }
     if (isGoal(state)) {
         // The start state is the goal state
-        println( "selectAction: The goal state is already found." )
+//        println("selectAction: The goal state is already found.")
         return emptyList()
     }
-    println( "Root state: $state" )
+//    println("Root state: $state")
     // Every turn learn then A* until time expires
     // Learning phase
     if (openList.isNotEmpty()) {
@@ -317,8 +318,6 @@ fun selectAction(state: State): List<ActionBundle> {
         plan = extractPlan(targetNode, state)
         rootState = targetNode.state
     }
-    println( "AStar pops: $aStarPopCounter Dijkstra pops: $dijkstraPopCounter" )
-    println( "AStar time: $aStarTimer Dijkstra pops: $dijkstraTimer" )
     return plan!!
 }
 /** Old code taken out during testing*/
