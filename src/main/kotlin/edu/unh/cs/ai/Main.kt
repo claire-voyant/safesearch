@@ -16,17 +16,14 @@ fun main(args: Array<String>) {
     val startState = readDomain(Scanner(File("./input/vehicle/small.v")))
     println("Given problem: ")
     visualize(startState)
-    val startNode = Node(null, startState, Action.START, 0.0, 0.0 + heuristic(startState))
     if (args.size == 1) {
         if (args[0] == "-a") {
-            val actions = aStar(startNode)
-            showActions(actions)
         } else if (args[0] == "-l") {
             /** TODO:: run lssrta* */
         } else if (args[0] == "-T") {
             println("Running tests....")
             println("Printing start state \n\t$startState...")
-            runTests(startNode)
+            runTests(Node(null, startState, Action.START, 0.0, 0.0, false, 0, heuristic(startState)))
         } else {
             print(args[0])
             println("not recognized/implemented")
