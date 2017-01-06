@@ -4,7 +4,8 @@ import java.util.*
 import kotlin.system.measureTimeMillis
 
 /**
- * Astar implementation
+ * LssLrtAstar implementation
+ * adapted from Bence Cserna (bence@cserna.net)
  * Created by doylew on 12/16/16.
  */
 data class Edge(val node: Node, val action: Action)
@@ -87,7 +88,6 @@ fun aStar(start: State): Node {
     nodes[startState] = node
     var currentNode = node
     addToOpenList(node)
-//    println("Beginning A* from $startState")
 
     val expandedNodes = measureInt({ nodesExpanded }) {
         while (!reachedTermination() && !isGoal(currentNode.state)) {
@@ -96,14 +96,6 @@ fun aStar(start: State): Node {
             expandNode(currentNode)
         }
     }
-
-    if (node == currentNode && !isGoal(currentNode.state)) {
-        //            throw InsufficientTerminationCriterionException("Not enough time to expand even one node")
-    } else {
-//        println("A* : expanded $expandedNodes nodes")
-    }
-//    println("Done with AStar at $currentNode")
-
     return currentNode
 }
 
@@ -111,8 +103,6 @@ fun reset() {
     rootState = null
     aStarPopCounter = 0
     dijkstraPopCounter = 0
-    aStarTimer = 0L
-    dijkstraTimer = 0L
     clearOpenList()
 }
 
@@ -132,7 +122,6 @@ fun expandNode(sourceNode: Node) {
     val currentGValue = sourceNode.g
     successors(sourceNode.state).forEach { successor ->
         val successorState = successor.state
-//        println("Expanding $successorState")
         val successorNode = getNode(sourceNode, successor)
         successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
         if (successorNode.iteration != iterationCounter) {
@@ -147,25 +136,17 @@ fun expandNode(sourceNode: Node) {
         if (successorState != sourceNode.parent?.state) {
             val successorGValueFromCurrent = currentGValue + successor.g
             if (successorNode.g > successorGValueFromCurrent) {
-                // here we generate a state. We store it's g value and remember how to get here via the treePointers
                 successorNode.apply {
                     g = successorGValueFromCurrent
                     parent = sourceNode
                     action = successor.action
                 }
 
-//                println("Expanding from $sourceNode --> $successorState :: open list size: ${openList.size}")
-//                println("Adding it to to cost table with value ${successorNode.g}")
-
                 if (!successorNode.open) {
-                    addToOpenList(successorNode) // Fresh node not on the open yet
+                    addToOpenList(successorNode)
                 } else {
                     openList.update(successorNode)
                 }
-            } else {
-                println(
-                        "Did not add, because it's cost is ${successorNode.g} compared to cost of predecessor ( ${sourceNode.g}"
-                )
             }
         }
     }
