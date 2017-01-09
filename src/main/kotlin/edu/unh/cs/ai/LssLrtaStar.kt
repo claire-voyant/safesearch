@@ -4,7 +4,8 @@ import java.util.*
 import kotlin.system.measureTimeMillis
 
 /**
- * Astar implementation
+ * LssLrtAstar implementation
+ * adapted from Bence Cserna (bence@cserna.net)
  * Created by doylew on 12/16/16.
  */
 
@@ -93,8 +94,6 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
         rootState = null
         aStarPopCounter = 0
         dijkstraPopCounter = 0
-        aStarTimer = 0L
-        dijkstraTimer = 0L
         clearOpenList()
     }
 
@@ -117,25 +116,20 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
             val successorNode = getNode(sourceNode, successor)
             successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
             if (successorNode.iteration != iterationCounter) {
-                successorNode.apply {
-                    iteration = iterationCounter
-                    predecessors.clear()
-                    g = kotlin.Double.MAX_VALUE
-                    open = false
-                }
-            }
-
-            if (successorState != sourceNode.parent?.state) {
-                val successorGValueFromCurrent = currentGValue + successor.g
-                if (successorNode.g > successorGValueFromCurrent) {
-                    successorNode.apply {
-                        g = successorGValueFromCurrent
-                        parent = sourceNode
-                        action = successor.action
+                if (successorState != sourceNode.parent?.state) {
+                    val successorGValueFromCurrent = currentGValue + successor.g
+                    if (successorNode.g > successorGValueFromCurrent) {
+                        successorNode.apply {
+                            iteration = iterationCounter
+                            predecessors.clear()
+                            g = kotlin.Double.MAX_VALUE
+                            open = false
+                        }
                     }
 
+
                     if (!successorNode.open) {
-                        addToOpenList(successorNode) // Fresh node not on the open yet
+                        addToOpenList(successorNode)
                     } else {
                         openList.update(successorNode)
                     }

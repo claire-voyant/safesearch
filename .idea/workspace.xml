@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="d1be3f05-af0f-4473-bac9-f25786ae0243" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/vehicle/vec.v" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Action.kt" />
@@ -20,6 +21,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/State.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/State.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Test.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Test.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Vehicle.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Vehicle.kt" />
+=======
+    <list default="true" id="af40e798-98e1-4daf-849d-a876abd9d337" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Astar.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/AdvancedPriorityQueue.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/AdvancedPriorityQueue.kt" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
     </list>
     <ignored path="SafeSearch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,6 +60,7 @@
     <favorites_list name="SafeSearch" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.7266627">
       <split-first>
         <splitter split-orientation="horizontal" split-proportion="0.6891008">
@@ -260,6 +268,117 @@
         </leaf>
       </split-second>
     </splitter>
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Main.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="15" column="68" lean-forward="false" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#105#143#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Test.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1269">
+              <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LssLrtaStar.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-940">
+              <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
+              <folding>
+                <element signature="e#23#80#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Run.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2914">
+              <caret line="62" column="37" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdvancedPriorityQueue.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/AdvancedPriorityQueue.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vehicle.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Vehicle.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4465">
+              <caret line="101" column="1" lean-forward="false" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simple.v" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/vehicle/simple.v">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="small.v" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/vehicle/small.v">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/State.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5593">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vehicle0.v" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/vehicle/vehicle0.v">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -691,15 +810,27 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/IO.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Action.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/State.kt" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Interfaces.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Test.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/AdvancedPriorityQueue.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Astar.kt" />
+=======
+        <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Vehicle.kt" />
+        <option value="$PROJECT_DIR$/input/vehicle/small.v" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Run.kt" />
         <option value="$PROJECT_DIR$/input/vehicle/small.v" />
         <option value="$PROJECT_DIR$/input/vehicle/vec.v" />
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/GridWorld.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Main.kt" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Test.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/AdvancedPriorityQueue.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Astar.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
       </list>
     </option>
   </component>
@@ -811,8 +942,12 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1281,16 +1416,35 @@
       <created>1483966919734</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1483966919734</updated>
       <workItem from="1483966921087" duration="348000" />
       <workItem from="1483967299010" duration="398000" />
       <workItem from="1483967830589" duration="50000" />
       <workItem from="1483967900192" duration="12174000" />
+=======
+      <updated>1481928935213</updated>
+      <workItem from="1481928942469" duration="323000" />
+      <workItem from="1481929422430" duration="2382000" />
+      <workItem from="1483149589341" duration="40000" />
+      <workItem from="1483149784915" duration="357000" />
+      <workItem from="1483150196472" duration="706000" />
+      <workItem from="1483151686623" duration="3341000" />
+      <workItem from="1483400996366" duration="888000" />
+      <workItem from="1483401904191" duration="7305000" />
+      <workItem from="1483409242911" duration="116000" />
+      <workItem from="1483579578940" duration="13713000" />
+      <workItem from="1483676933040" duration="840000" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="12970000" />
+=======
+    <option name="totallyTimeSpent" value="30011000" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="52" width="5113" height="1388" extended-state="4" />
@@ -1298,17 +1452,32 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.58914727" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09177028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38350055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27647716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20721926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1322,7 +1491,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1346,20 +1519,35 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Test.kt</url>
           <line>14</line>
+=======
+          <url>file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt</url>
+          <line>267</line>
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Run.kt</url>
           <line>10</line>
+=======
+          <url>file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt</url>
+          <line>297</line>
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Run.kt</url>
           <line>19</line>
+=======
+          <url>file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt</url>
+          <line>120</line>
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
@@ -1392,7 +1580,11 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/AdvancedPriorityQueue.kt">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt">
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1424,6 +1616,30 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#105#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2632">
+          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="e#23#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Vehicle.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1459,7 +1675,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Astar.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -1493,6 +1709,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+=======
+        <state relative-caret-position="987">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#105#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -1526,7 +1756,11 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Run.kt">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt">
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1545,8 +1779,36 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Vehicle.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+<<<<<<< HEAD
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+=======
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#105#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#23#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/State.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
         </state>
       </provider>
     </entry>
@@ -1566,7 +1828,11 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Action.kt">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt">
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
@@ -1614,6 +1880,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Astar.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
@@ -1627,6 +1894,15 @@
         <state relative-caret-position="286">
           <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/State.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5593">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
         </state>
       </provider>
     </entry>
@@ -1648,32 +1924,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input/vehicle/small.v">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="126">
           <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+=======
+        <state relative-caret-position="2914">
+          <caret line="62" column="37" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/GridWorld.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="412">
           <caret line="81" column="82" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="82" />
+=======
+        <state relative-caret-position="517">
+          <caret line="15" column="68" lean-forward="false" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#105#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Test.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1269">
+          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Vehicle.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4465">
+          <caret line="101" column="1" lean-forward="false" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/input/vehicle/vec.v">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/AdvancedPriorityQueue.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="79" selection-start-line="20" selection-start-column="79" selection-end-line="20" selection-end-column="79" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/edu/unh/cs/ai/LssLrtaStar.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-940">
+          <caret line="148" column="16" lean-forward="false" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
+>>>>>>> b073762dda33cbef7406f226476227bc16a4c8a6
           <folding>
             <element signature="e#22#93#0" expanded="true" />
             <marker date="1483980961780" expanded="true" signature="230:232" ph="{...}" />
