@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
     val startState : State<GridWorldState>
     if (args[0] == "-g") {
-        startState = readGridWorldDomain(Scanner(File("./input/vehicle/vehicle0.v")))
+        startState = readGridWorldDomain(Scanner(System.`in`))
     } else {
         println("unsupported function")
         exitProcess(-1)
@@ -29,7 +29,7 @@ fun main(args: Array<String>) {
         if (args[1] == "-a") {
             runAStar(startState)
         } else if (args[1] == "-l") {
-            runLssLrtaStar(startState, 10)
+            runLssLrtaStar(startState, 10, false)
         } else if (args[1] == "-T") {
             println("Running tests....")
             println("Printing start state \n\t$startState...")
@@ -41,16 +41,14 @@ fun main(args: Array<String>) {
     } else if (args.size == 3) {
         if (args[1] == "-l" && args[2] == "-s") {
             /** TODO: run safe search*/
+            runLssLrtaStar(startState, 10, true)
         } else if (args[1] == "-l") {
-            runLssLrtaStar(startState, args[2].toInt())
+            runLssLrtaStar(startState, args[2].toInt(), false)
         }
+    } else if (args.size == 4) {
+        runLssLrtaStar(startState, args[2].toInt(), args[3].toBoolean())
     } else {
         println("unsupported function")
     }
 }
 
-fun showActions(actions: ArrayList<Action>): Unit {
-    actions.forEach {
-        println("\t $it")
-    }
-}

@@ -7,7 +7,7 @@ import kotlin.system.measureTimeMillis
  * Created by willi on 1/5/2017.
  */
 
-fun runLssLrtaStar(start: State<GridWorldState>, iterations: Int) {
+fun runLssLrtaStar(start: State<GridWorldState>, iterations: Int, safetyFlag: Boolean) {
     val runner = LssLrtaStarRunner(start)
     var actionList: List<ActionBundle> = listOf()
     var timeTaken: Long = 0
@@ -27,12 +27,12 @@ fun runLssLrtaStar(start: State<GridWorldState>, iterations: Int) {
                 actions.add(it.action)
             }
         }
-        println("Agent return actions: |${actionList.size}| to state $currentState")
+//        println("Agent return actions: |${actionList.size}| to state $currentState")
     }
     val pathLength = actions.size
     println("$pathLength Actions taken:")
     actions.forEach(::println)
-    println("Time taken: $timeTaken")
+    println("Time taken: $timeTaken ms")
 }
 
 fun runAStar(start: State<GridWorldState>) {
@@ -56,7 +56,7 @@ fun runAStar(start: State<GridWorldState>) {
 
             }
         }
-        println("Agent return actions: |${actionList.size}| to state $currentState")
+//        println("Agent return actions: |${actionList.size}| to state $currentState")
     }
     val pathLength = actions.size
     println("$pathLength Actions taken:")
