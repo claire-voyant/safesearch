@@ -79,8 +79,8 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
     }
 
     override fun heuristic(): Double {
-        return (Math.abs(agentLocation.x.toDouble() - goalLocation.x.toDouble())) +
-                (Math.abs(agentLocation.x.toDouble() - goalLocation.x.toDouble()))
+        return ((Math.abs(agentLocation.x - goalLocation.x)) +
+                (Math.abs(agentLocation.y - goalLocation.y))).toDouble()
     }
 
     override fun successors(): ArrayList<Node<GridWorldState>> {

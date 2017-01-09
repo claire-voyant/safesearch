@@ -64,6 +64,7 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
 
     fun reachedTermination(): Boolean {
         if (iterationCounter == maximumIterations) {
+            iterationCounter = 0
             return true
         }
         return false
@@ -78,7 +79,7 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
         nodes[startState] = node
         var currentNode = node
         addToOpenList(node)
-        val expandedNodes = measureInt({ nodesExpanded }) {
+        measureInt({ nodesExpanded }) {
             while (!reachedTermination() && !currentNode.state.isGoal()) {
                 aStarPopCounter++
                 currentNode = popOpenList()
@@ -115,7 +116,11 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
         sourceNode.state.successors().forEach { successor: Node<T> ->
             val successorState = successor.state
             val successorNode = getNode(sourceNode, successor)
-            successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
+
+            if(!successorNode.predecessors.contains(Edge(node = sourceNode, action = successor.action))){
+                successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
+            }
+
             if (successorNode.iteration != iterationCounter) {
                 successorNode.apply {
                     iteration = iterationCounter
@@ -126,12 +131,13 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
             }
 
             if (successorState != sourceNode.parent?.state) {
-                val successorGValueFromCurrent = currentGValue + successor.g
+                val successorGValueFromCurrent = currentGValue + successor.g + 1
                 if (successorNode.g > successorGValueFromCurrent) {
                     successorNode.apply {
                         g = successorGValueFromCurrent
                         parent = sourceNode
                         action = successor.action
+                        f = g + heuristic
                     }
 
                     if (!successorNode.open) {
@@ -155,7 +161,7 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
                     heuristic = successorState.heuristic(),
                     action = successor.action,
                     parent = parent,
-                    g = 1.0,
+                    g = kotlin.Double.MAX_VALUE,
                     iteration = iterationCounter,
                     open = false,
                     f = kotlin.Double.MAX_VALUE)
