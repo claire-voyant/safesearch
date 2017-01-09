@@ -1,9 +1,4 @@
 package edu.unh.cs.ai
-
-/**
- *
- * Created by willi on 1/4/2017.
- */
 import java.util.*
 
 /**

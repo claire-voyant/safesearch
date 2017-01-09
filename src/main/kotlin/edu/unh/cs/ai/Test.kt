@@ -5,38 +5,37 @@ package edu.unh.cs.ai
  * Created by willi on 1/2/2017.
  */
 
-fun validStateTest(node: Node) : Boolean {
+fun validStateTest(node: Node<GridWorldState>) : Boolean {
     println("validStateTest and successorTest")
-    visualize(node.state)
+    node.state.visualize()
     var success = true
-    if(!validState(node.state)) {
+    if(!node.state.validState()) {
        success = false
     }
-    val successors = successors(node.state)
+    val successors = node.state.successors()
     successors.forEach {
         println("\tVisualzing successors...")
         println("\t${it.action}")
         println(it)
-        if(!validState(it.state)) {
+        if(!it.state.validState()) {
             success = false
         }
-        visualize(it.state)
-        val nextSuccessors = successors(it.state)
-        nextSuccessors.forEach {
-            println("\t\tVisualizing successor of successors...")
-            println("\t\t${it.action}")
-            println(it)
-            if(!validState(it.state)) {
-                success = false
-            }
-            visualize(it.state)
-        }
+        it.state.visualize()
+//        val nextSuccessors = it.state.successors()
+//        nextSuccessors.forEach {
+//            println("\t\tVisualizing successor of successors...")
+//            println("\t\t${it.action}")
+//            println(it)
+//            if(!it.state.validState()) {
+//                success = false
+//            }
+//            it.state.visualize()
+//        }
     }
     return success
 }
 
-
-fun runTests(node: Node) : Unit {
+fun runTests(node: Node<GridWorldState>) : Unit {
     var success = true
     if(!validStateTest(node)) {success = false}
     if(success) {

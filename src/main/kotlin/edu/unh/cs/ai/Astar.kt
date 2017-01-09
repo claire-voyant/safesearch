@@ -7,318 +7,251 @@ import kotlin.system.measureTimeMillis
  * Astar implementation
  * Created by doylew on 12/16/16.
  */
-data class Edge(val node: Node, val action: Action)
 
 data class ActionBundle(val action: Action, val cost: Double)
-data class Node(var parent: Node?, val state: State, var action: Action, var g: Double,
-                var f: Double, var open: Boolean, var iteration: Int, var heuristic: Double) : Comparable<Node>, Indexable {
-    override fun compareTo(other: Node): Int {
-        if (parent == other.parent && state == other.state && action == other.action && g == other.g && f == other.f) {
-            return 0
-        } else if (parent == other.parent && state == other.state && action == other.action && f < other.f) {
-            return -1
-        } else {
-            return 1
-        }
-    }
 
+data class Node<T>(var parent: Node<T>?, val state: State<T>, var action: Action, var g: Double,
+                   var f: Double, var open: Boolean, var iteration: Int, var heuristic: Double) : Indexable {
     override var index: Int = -1
-
-    val predecessors: MutableList<Edge> = arrayListOf()
+    val predecessors: MutableList<LssLrtaStarRunner.Edge<T>> = arrayListOf()
     override fun toString(): String {
         return "Node: [State: $state h: $heuristic, g: $g, iteration: $iteration," +
                 " parent: ${parent?.state}, open: $open ]"
     }
 }
 
+data class LssLrtaStarRunner<T>(val start: State<T>) {
+    data class Edge<T>(val node: Node<T>, val action: Action)
 
-private val fComparator = Comparator<Node> { lhs, rhs ->
-    when {
-        lhs.f < rhs.f -> -1
-        lhs.f > rhs.f -> 1
-        lhs.g > rhs.g -> -1
-        lhs.g < rhs.g -> 1
-        else -> 0
-    }
-}
-
-private val heuristicComparator = Comparator<Node> { lhs, rhs ->
-    when {
-        lhs.heuristic < rhs.heuristic -> -1
-        lhs.heuristic > rhs.heuristic -> 1
-        else -> 0
-    }
-}
-
-var nodesGenerated = 0
-var nodesExpanded = 0
-var iterationCounter = 0
-private var rootState: State? = null
-private var aStarPopCounter = 0
-private var dijkstraPopCounter = 0
-private var aStarTimer = 0L
-    get
-private var dijkstraTimer = 0L
-    get
-val nodes = HashMap<State, Node>(1000000)
-val openList = AdvancedPriorityQueue<Node>(1000000, fComparator)
-
-
-fun initializeAStar(): Unit {
-    iterationCounter++
-    openList.clear()
-}
-
-var maximumIterations = 10
-
-fun reachedTermination(): Boolean {
-    if (iterationCounter == maximumIterations) {
-        return true
-    }
-    return false
-}
-
-fun aStar(start: State): Node {
-    initializeAStar()
-    nodesGenerated++
-
-    val node = Node(null, start, Action.START, 0.0, 0.0, false, iterationCounter, heuristic(start))
-    val startState = start
-    nodes[startState] = node
-    var currentNode = node
-    addToOpenList(node)
-//    println("Beginning A* from $startState")
-
-    val expandedNodes = measureInt({ nodesExpanded }) {
-        while (!reachedTermination() && !isGoal(currentNode.state)) {
-            aStarPopCounter++
-            currentNode = popOpenList()
-            expandNode(currentNode)
+    private val fComparator = Comparator<Node<T>> { lhs, rhs ->
+        when {
+            lhs.f < rhs.f -> -1
+            lhs.f > rhs.f -> 1
+            lhs.g > rhs.g -> -1
+            lhs.g < rhs.g -> 1
+            else -> 0
         }
     }
 
-    if (node == currentNode && !isGoal(currentNode.state)) {
-        //            throw InsufficientTerminationCriterionException("Not enough time to expand even one node")
-    } else {
-//        println("A* : expanded $expandedNodes nodes")
-    }
-//    println("Done with AStar at $currentNode")
-
-    return currentNode
-}
-
-fun reset() {
-    rootState = null
-    aStarPopCounter = 0
-    dijkstraPopCounter = 0
-    aStarTimer = 0L
-    dijkstraTimer = 0L
-    clearOpenList()
-}
-
-fun computeActions(node: Node, startState: State): ArrayList<Action> {
-    var currentNode: Node? = node
-    val actions = ArrayList<Action>()
-    while (startState != currentNode!!.state) {
-        actions.add(currentNode.action)
-        currentNode = currentNode.parent
-    }
-    actions.reverse()
-    return actions
-}
-
-fun expandNode(sourceNode: Node) {
-    nodesExpanded++
-    val currentGValue = sourceNode.g
-    successors(sourceNode.state).forEach { successor ->
-        val successorState = successor.state
-//        println("Expanding $successorState")
-        val successorNode = getNode(sourceNode, successor)
-        successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
-        if (successorNode.iteration != iterationCounter) {
-            successorNode.apply {
-                iteration = iterationCounter
-                predecessors.clear()
-                g = kotlin.Double.MAX_VALUE
-                open = false
-            }
-        }
-
-        if (successorState != sourceNode.parent?.state) {
-            val successorGValueFromCurrent = currentGValue + successor.g
-            if (successorNode.g > successorGValueFromCurrent) {
-                // here we generate a state. We store it's g value and remember how to get here via the treePointers
-                successorNode.apply {
-                    g = successorGValueFromCurrent
-                    parent = sourceNode
-                    action = successor.action
-                }
-
-//                println("Expanding from $sourceNode --> $successorState :: open list size: ${openList.size}")
-//                println("Adding it to to cost table with value ${successorNode.g}")
-
-                if (!successorNode.open) {
-                    addToOpenList(successorNode) // Fresh node not on the open yet
-                } else {
-                    openList.update(successorNode)
-                }
-            } else {
-                println(
-                        "Did not add, because it's cost is ${successorNode.g} compared to cost of predecessor ( ${sourceNode.g}"
-                )
-            }
+    private val heuristicComparator = Comparator<Node<T>> { lhs, rhs ->
+        when {
+            lhs.heuristic < rhs.heuristic -> -1
+            lhs.heuristic > rhs.heuristic -> 1
+            else -> 0
         }
     }
-}
 
-private fun getNode(parent: Node, successor: Node): Node {
-    val successorState = successor.state
-    val tempSuccessorNode = nodes[successorState]
+    var nodesGenerated = 0
+    var nodesExpanded = 0
+    var iterationCounter = 0
+    private var rootState: State<T>? = null
+    private var aStarPopCounter = 0
+    private var dijkstraPopCounter = 0
+    private var aStarTimer = 0L
+        get
+    private var dijkstraTimer = 0L
+        get
+    val nodes = HashMap<State<T>, Node<T>>(1000000)
+    val openList = AdvancedPriorityQueue<Node<T>>(1000000, fComparator)
 
-    return if (tempSuccessorNode == null) {
+
+    fun initializeAStar(): Unit {
+        iterationCounter++
+        openList.clear()
+    }
+
+    var maximumIterations = 10
+
+    fun reachedTermination(): Boolean {
+        if (iterationCounter == maximumIterations) {
+            return true
+        }
+        return false
+    }
+
+    fun aStar(start: State<T>): Node<T> {
+        initializeAStar()
         nodesGenerated++
-        val undiscoveredNode = Node(
-                state = successorState,
-                heuristic = heuristic(successorState),
-                action = successor.action,
-                parent = parent,
-                g = kotlin.Double.MAX_VALUE,
-                iteration = iterationCounter,
-                open = false,
-                f = kotlin.Double.MAX_VALUE)
 
-        nodes[successorState] = undiscoveredNode
-        undiscoveredNode
-    } else {
-        tempSuccessorNode
-    }
-}
-
-private fun popOpenList(): Node {
-    val node = openList.pop() ?: throw Exception("Goal not reachable. Open list is empty.")
-    node.open = false
-    return node
-}
-
-private fun addToOpenList(node: Node) {
-    openList.add(node)
-    node.open = true
-}
-
-private fun clearOpenList() {
-//    println("Clear open list")
-    openList.applyAndClear {
-        it.open = false
-    }
-}
-
-inline fun measureInt(property: () -> Int, block: () -> Unit): Int {
-    val initialPropertyValue = property()
-    block()
-    return property() - initialPropertyValue
-}
-
-private fun dijkstra() {
-//    println("Start: Dijkstra")
-    // Invalidate the current heuristic value by incrementing the counter
-    iterationCounter++
-    // change openList ordering to heuristic only`
-    openList.reorder(heuristicComparator)
-    // LSS-LRTA addition
-    //        openList.toTypedArray().forEach {
-    //            it.iteration = iterationCounter
-    //        }
-    while (!reachedTermination() && openList.isNotEmpty()) {
-        // Closed list should be checked
-        val node = popOpenList()
-        node.iteration = iterationCounter
-        val currentHeuristicValue = node.heuristic
-        // update heuristic value for each predecessor
-        for ((predecessorNode) in node.predecessors) {
-            if (predecessorNode.iteration == iterationCounter && !predecessorNode.open) {
-                // This node was already learned and closed in the current iteration
-                continue
+        val node = Node(null, start, Action.START, 0.0, 0.0, false, iterationCounter, start.heuristic())
+        val startState = start
+        nodes[startState] = node
+        var currentNode = node
+        addToOpenList(node)
+        val expandedNodes = measureInt({ nodesExpanded }) {
+            while (!reachedTermination() && !currentNode.state.isGoal()) {
+                aStarPopCounter++
+                currentNode = popOpenList()
+                expandNode(currentNode)
             }
-            // Update if the node is outdated
-            //                if (predecessorNode.iteration != iterationCounter) {
-            //                    predecessorNode.heuristic = Double.POSITIVE_INFINITY
-            //                    predecessorNode.iteration = iterationCounter
-            //                }
-            val predecessorHeuristicValue = predecessorNode.heuristic
-            //                logger.debug { "Considering predecessor ${predecessor.node} with heuristic value $predecessorHeuristicValue" }
-            //                logger.debug { "Node in closedList: ${predecessor.node in closedList}. Current heuristic: $predecessorHeuristicValue. Proposed new value: ${(currentHeuristicValue + predecessor.actionCost)}" }
-            if (!predecessorNode.open) {
-                // This node is not open yet, because it was not visited in the current planning iteration
-                predecessorNode.heuristic = currentHeuristicValue + 1
-                assert(predecessorNode.iteration == iterationCounter - 1)
-                predecessorNode.iteration = iterationCounter
-                addToOpenList(predecessorNode)
-            } else if (predecessorHeuristicValue > currentHeuristicValue + 1) {
-                // This node was visited in this learning phase, but the current path is better then the previous
-                predecessorNode.heuristic = currentHeuristicValue + 1
-                openList.update(predecessorNode) // Update priority
-                // Frontier nodes could be also visited TODO
-                //                    assert(predecessorNode.iteration == iterationCounter) {
-                //                        "Expected iteration stamp $iterationCounter got ${predecessorNode.iteration}"
-                //                    }
+        }
+
+        return currentNode
+    }
+
+    fun reset() {
+        rootState = null
+        aStarPopCounter = 0
+        dijkstraPopCounter = 0
+        aStarTimer = 0L
+        dijkstraTimer = 0L
+        clearOpenList()
+    }
+
+    fun computeActions(node: Node<T>, startState: State<T>): ArrayList<Action> {
+        var currentNode: Node<T>? = node
+        val actions = ArrayList<Action>()
+        while (startState != currentNode!!.state) {
+            actions.add(currentNode.action)
+            currentNode = currentNode.parent
+        }
+        actions.reverse()
+        return actions
+    }
+
+    fun expandNode(sourceNode: Node<T>) {
+        nodesExpanded++
+        val currentGValue = sourceNode.g
+        sourceNode.state.successors().forEach { successor: Node<T> ->
+            val successorState = successor.state
+            val successorNode = getNode(sourceNode, successor)
+            successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
+            if (successorNode.iteration != iterationCounter) {
+                successorNode.apply {
+                    iteration = iterationCounter
+                    predecessors.clear()
+                    g = kotlin.Double.MAX_VALUE
+                    open = false
+                }
+            }
+
+            if (successorState != sourceNode.parent?.state) {
+                val successorGValueFromCurrent = currentGValue + successor.g
+                if (successorNode.g > successorGValueFromCurrent) {
+                    successorNode.apply {
+                        g = successorGValueFromCurrent
+                        parent = sourceNode
+                        action = successor.action
+                    }
+
+                    if (!successorNode.open) {
+                        addToOpenList(successorNode) // Fresh node not on the open yet
+                    } else {
+                        openList.update(successorNode)
+                    }
+                }
             }
         }
     }
-    // update mode if done
-    if (openList.isEmpty()) {
-//        println("Done with Dijkstra")
-    } else {
-//        println("Incomplete learning step. Lists: Open(${openList.size})")
-    }
-}
 
-private fun extractPlan(targetNode: Node, sourceState: State): List<ActionBundle> {
-    val actions = ArrayList<ActionBundle>(1000)
-    var currentNode = targetNode
+    private fun getNode(parent: Node<T>, successor: Node<T>): Node<T> {
+        val successorState = successor.state
+        val tempSuccessorNode = nodes[successorState]
 
-//    println("Extracting plan")
+        return if (tempSuccessorNode == null) {
+            nodesGenerated++
+            val undiscoveredNode = Node(
+                    state = successorState,
+                    heuristic = successorState.heuristic(),
+                    action = successor.action,
+                    parent = parent,
+                    g = 1.0,
+                    iteration = iterationCounter,
+                    open = false,
+                    f = kotlin.Double.MAX_VALUE)
 
-    if (targetNode.state == sourceState) {
-        return emptyList()
+            nodes[successorState] = undiscoveredNode
+            undiscoveredNode
+        } else {
+            tempSuccessorNode
+        }
     }
-    // keep on pushing actions to our queue until source state (our root) is reached
-    do {
-        actions.add(ActionBundle(currentNode.action, currentNode.g))
-        currentNode = currentNode?.parent!!
-    } while (currentNode.state != sourceState)
 
-//    println({ "Plan extracted" })
-    return actions.reversed()
+    private fun popOpenList(): Node<T> {
+        val node = openList.pop() ?: throw Exception("Goal not reachable. Open list is empty.")
+        node.open = false
+        return node
+    }
 
-}
+    private fun addToOpenList(node: Node<T>) {
+        openList.add(node)
+        node.open = true
+    }
 
-fun selectAction(state: State): List<ActionBundle> {
-    // Initiate for the first search
-    if (rootState == null) {
-        rootState = state
-    } else if (state != rootState) {
-        // The given state should be the last target
-//        println("Inconsistent world state. Expected $rootState got $state")
+    private fun clearOpenList() {
+//    println("Clear open list")
+        openList.applyAndClear {
+            it.open = false
+        }
     }
-    if (isGoal(state)) {
-        // The start state is the goal state
-//        println("selectAction: The goal state is already found.")
-        return emptyList()
+
+    inline fun measureInt(property: () -> Int, block: () -> Unit): Int {
+        val initialPropertyValue = property()
+        block()
+        return property() - initialPropertyValue
     }
-//    println("Root state: $state")
-    // Every turn learn then A* until time expires
-    // Learning phase
-    if (openList.isNotEmpty()) {
-        dijkstraTimer += measureTimeMillis { dijkstra() }
+
+    private fun updateHeuristics() {
+        iterationCounter++
+        openList.reorder(heuristicComparator)
+        while (!reachedTermination() && openList.isNotEmpty()) {
+            val node = popOpenList()
+            node.iteration = iterationCounter
+            val currentHeuristicValue = node.heuristic
+            for ((predecessorNode) in node.predecessors) {
+                if (predecessorNode.iteration == iterationCounter && !predecessorNode.open) {
+                    continue
+                }
+                val predecessorHeuristicValue = predecessorNode.heuristic
+                if (!predecessorNode.open) {
+                    predecessorNode.heuristic = currentHeuristicValue + 1
+                    assert(predecessorNode.iteration == iterationCounter - 1)
+                    predecessorNode.iteration = iterationCounter
+                    addToOpenList(predecessorNode)
+                } else if (predecessorHeuristicValue > currentHeuristicValue + 1) {
+                    predecessorNode.heuristic = currentHeuristicValue + 1
+                    openList.update(predecessorNode) // Update priority
+                }
+            }
+        }
     }
-    // Exploration phase
-    var plan: List<ActionBundle>? = null
-    aStarTimer += measureTimeMillis {
-        val targetNode = aStar(state)
-        plan = extractPlan(targetNode, state)
-        rootState = targetNode.state
+
+    private fun extractPlan(targetNode: Node<T>, sourceState: State<T>): List<ActionBundle> {
+        val actions = ArrayList<ActionBundle>(1000)
+        var currentNode = targetNode
+
+        if (targetNode.state == sourceState) {
+            return emptyList()
+        }
+        do {
+            actions.add(ActionBundle(currentNode.action, currentNode.g))
+            currentNode = currentNode?.parent!!
+        } while (currentNode.state != sourceState)
+
+        return actions.reversed()
     }
-    return plan!!
+
+    fun selectAction(state: State<T>): List<ActionBundle> {
+        if (rootState == null) {
+            rootState = state
+        } else if (state != rootState) {
+        }
+        if (state.isGoal()) {
+            return emptyList()
+        }
+        // Learning phase
+        if (openList.isNotEmpty()) {
+            dijkstraTimer += measureTimeMillis { updateHeuristics() }
+        }
+        // Exploration phase
+        var plan: List<ActionBundle>? = null
+        aStarTimer += measureTimeMillis {
+            val targetNode = aStar(state)
+            plan = extractPlan(targetNode, state)
+            rootState = targetNode.state
+        }
+        return plan!!
+    }
 }
 /** Old code taken out during testing*/
 //if (it.state != sourceNode.state) {
