@@ -1,4 +1,5 @@
 package edu.unh.cs.ai
+
 import java.io.File
 import java.util.*
 import kotlin.system.exitProcess
@@ -15,40 +16,53 @@ fun main(args: Array<String>) {
     println("arg1: -g [GRIDWORLD] | -v [VEHICLE]")
     println("arg2: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]")
     println("arg3: [ITERATIONS] | -s [SAFETY_FLAG]")
+    println("provide problem in standard input < [PROBLEM-FILE]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
-    val startState : State<GridWorldState>
+    val inputFile = Scanner(File("./input/vehicle/small.v"))
+    var startGridWorld: State<GridWorldState> = initializeDummyGridWorld()
+    var startVehicle: State<VehicleState> = initializeDummyVehicle()
     if (args[0] == "-g") {
-        startState = readGridWorldDomain(Scanner(System.`in`))
+        startGridWorld = readGridWorldDomain(inputFile)
+        println("Running GridWorld...")
+    } else if (args[0] == "-v") {
+        startVehicle = readVehicleDomain(inputFile)
+        println("Running Vehicle...")
     } else {
-        println("unsupported function")
+        println("unsupported function, exiting...")
         exitProcess(-1)
     }
     println("Given problem: ")
-    startState.visualize()
+    if (args[0] == "-g") startGridWorld.visualize() else startVehicle.visualize()
     if (args.size == 2) {
         if (args[1] == "-a") {
-            runAStar(startState)
+            runAStar(if (args[0] == "-g") startGridWorld else startVehicle)
         } else if (args[1] == "-l") {
-            runLssLrtaStar(startState, 10, false)
+            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, 10, false)
         } else if (args[1] == "-T") {
+            if (args[0] == "-v") {
+                println("no tests for vehicle...exiting...")
+                exitProcess(0)
+            }
             println("Running tests....")
-            println("Printing start state \n\t$startState...")
-            runTests(Node(null, startState, Action.START, 0.0, 0.0, false, 0, startState.heuristic()))
+            println("Printing start state \n\t$startGridWorld...")
+            runTests(Node(null, startGridWorld, Action.START, 0.0, 0.0, false, 0, startGridWorld.heuristic()))
         } else {
             print(args[1])
-            println("not recognized/implemented")
+            println("unsupported function, exiting...")
+            exitProcess(-1)
         }
     } else if (args.size == 3) {
         if (args[1] == "-l" && args[2] == "-s") {
             /** TODO: run safe search*/
-            runLssLrtaStar(startState, 10, true)
+            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, 10, true)
         } else if (args[1] == "-l") {
-            runLssLrtaStar(startState, args[2].toInt(), false)
+            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt(), false)
         }
     } else if (args.size == 4) {
-        runLssLrtaStar(startState, args[2].toInt(), args[3].toBoolean())
+        runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt(), args[3].toBoolean())
     } else {
-        println("unsupported function")
+        println("unsupported function, exiting...")
+        exitProcess(-1)
     }
 }
 

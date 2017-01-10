@@ -7,9 +7,10 @@ import kotlin.system.measureTimeMillis
  * Created by willi on 1/5/2017.
  */
 
-fun runLssLrtaStar(start: State<GridWorldState>, iterations: Int, safetyFlag: Boolean) {
+fun <T> runLssLrtaStar(start: State<T>, iterations: Int, safetyFlag: Boolean) {
+    if (safetyFlag) println("Running Safe LssLrtaStar") else println("Running LssLrtaStar")
     val runner = LssLrtaStarRunner(start)
-    var actionList: List<ActionBundle> = listOf()
+    var actionList: List<ActionBundle>
     var timeTaken: Long = 0
     val singleStepLookahead = true
     val actions: MutableList<Action> = arrayListOf()
@@ -35,11 +36,12 @@ fun runLssLrtaStar(start: State<GridWorldState>, iterations: Int, safetyFlag: Bo
     println("Time taken: $timeTaken ms")
 }
 
-fun runAStar(start: State<GridWorldState>) {
+fun <T> runAStar(start: State<T>) {
+    println("Running Astar")
     val runner = LssLrtaStarRunner(start)
     val singleStepLookahead = false
     var timeTaken: Long = 0
-    var actionList: List<ActionBundle> = listOf()
+    var actionList: List<ActionBundle>
     val actions: MutableList<Action> = arrayListOf()
     runner.maximumIterations = kotlin.Int.MAX_VALUE
 
@@ -63,3 +65,4 @@ fun runAStar(start: State<GridWorldState>) {
     actions.forEach(::println)
     println("Time taken: $timeTaken ms")
 }
+

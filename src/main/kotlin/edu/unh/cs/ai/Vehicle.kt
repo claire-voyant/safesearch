@@ -8,21 +8,10 @@ import java.util.*
  * Created by doylew on 12/30/16
  */
 
-private val invalidState = VehicleState(Dimensions(-1, -1), Pair(-1, -1), Pair(-1, -1), ArrayList<Pair>(), ArrayList<Pair>())
-private val obstacleVelocities = ArrayList<Pair>(1000).apply {
-    forEach {
-        if (random.nextBoolean()) {
-            it.x = random.nextInt() % 1 + 1
-            it.y = 0
-        } else {
-            it.x = 0
-            it.y = random.nextInt() % 1 + 1
-        }
-    }
-}
+private val invalidState = VehicleState(Dimensions(-1, -1), Pair(-1, -1), Pair(-1, -1), ArrayList<Pair>(), ArrayList<Pair>(), ArrayList<Pair>())
 
-class VehicleState(val dimensions: Dimensions, val agentLocation: Pair, val goalLocation: Pair,
-                   val obstacles: ArrayList<Pair>, val bunkers: ArrayList<Pair>) : State<VehicleState>() {
+class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalLocation: Pair,
+                   val obstacles: ArrayList<Pair>, val bunkers: ArrayList<Pair>, val obstacleVelocities: ArrayList<Pair>) : State<VehicleState>() {
 
     override fun hashCode(): Int {
         return agentLocation.hashCode() xor obstacles.hashCode()
@@ -67,12 +56,20 @@ class VehicleState(val dimensions: Dimensions, val agentLocation: Pair, val goal
         return successors
     }
 
+    fun validObstacleLocation(obstacle: Pair) : Boolean {
+        if (obstacle.x >= 0 && obstacle.x < dimension.width) {
+            if (obstacle.y >= 0 && obstacle.y < dimension.height) {
+                return true
+            }
+        }
+        return false
+    }
     fun moveObstacles(obstacles: ArrayList<Pair>): ArrayList<Pair> {
-        val newObstacles = ArrayList<Pair>()
+        val newObstacles = ArrayList<Pair>(obstacles.size)
         obstacles.forEachIndexed { i, pair ->
             val oldObstaclePair = Pair(pair.x, pair.y)
             val newObstaclePair = Pair(pair.x + obstacleVelocities[i].x, pair.y + obstacleVelocities[i].y)
-            if (bunkers.contains(newObstaclePair)) {
+            if (bunkers.contains(newObstaclePair) || !validObstacleLocation(newObstaclePair)) {
                 // if the new obstacle location would be a bunker
                 // add the old location and bounce the velocities
                 newObstacles.add(oldObstaclePair)
@@ -86,8 +83,10 @@ class VehicleState(val dimensions: Dimensions, val agentLocation: Pair, val goal
     }
 
     override fun transition(action: Action): State<VehicleState> {
+        visualize()
         val movedObstacles = moveObstacles(obstacles)
-        val candidateState = VehicleState(dimensions, Pair(agentLocation.x, agentLocation.y), goalLocation, movedObstacles, bunkers)
+        val candidateState = VehicleState(dimension, Pair(agentLocation.x, agentLocation.y), goalLocation, movedObstacles, bunkers, obstacleVelocities)
+        candidateState.visualize()
 
         if (action == Action.NORTH) {
             candidateState.agentLocation.y -= 1
@@ -118,8 +117,8 @@ class VehicleState(val dimensions: Dimensions, val agentLocation: Pair, val goal
     }
 
     override fun validState(): Boolean {
-        if (agentLocation.x >= 0 && agentLocation.x < dimensions.width) {
-            if (agentLocation.y >= 0 && agentLocation.y < dimensions.height) {
+        if (agentLocation.x >= 0 && agentLocation.x < dimension.width) {
+            if (agentLocation.y >= 0 && agentLocation.y < dimension.height) {
                 if (!obstacles.contains(Pair(agentLocation.x, agentLocation.y))) {
                     return true
                 }
@@ -129,8 +128,8 @@ class VehicleState(val dimensions: Dimensions, val agentLocation: Pair, val goal
     }
 
     override fun visualize() {
-        (0..dimensions.height - 1).forEach { y ->
-            (0..dimensions.width - 1).forEach { x ->
+        (0..dimension.height - 1).forEach { y ->
+            (0..dimension.width - 1).forEach { x ->
                 if (x == agentLocation.x && y == agentLocation.y) {
                     print('@')
                 } else if (x == goalLocation.x && y == goalLocation.y) {
@@ -143,7 +142,9 @@ class VehicleState(val dimensions: Dimensions, val agentLocation: Pair, val goal
                     print('_')
                 }
             }
+            println()
         }
+        println()
     }
 }
 //
