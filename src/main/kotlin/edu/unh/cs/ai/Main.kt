@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
     println("arg3: [ITERATIONS] | -s [SAFETY_FLAG]")
     println("provide problem in standard input < [PROBLEM-FILE]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
-    val inputFile = Scanner(File("./input/vehicle/vehicle0.v"))
+    val inputFile = Scanner(File("./input/vehicle/vehicle5.v"))
     var startGridWorld: State<GridWorldState> = initializeDummyGridWorld()
     var startVehicle: State<VehicleState> = initializeDummyVehicle()
     if (args[0] == "-g") {
@@ -37,7 +37,7 @@ fun main(args: Array<String>) {
         if (args[1] == "-a") {
             runAStar(if (args[0] == "-g") startGridWorld else startVehicle)
         } else if (args[1] == "-l") {
-            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, 10, false)
+            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, 10)
         } else if (args[1] == "-T") {
             if (args[0] == "-v") {
                 println("no tests for vehicle...exiting...")
@@ -53,13 +53,12 @@ fun main(args: Array<String>) {
         }
     } else if (args.size == 3) {
         if (args[1] == "-l" && args[2] == "-s") {
-            /** TODO: run safe search*/
             runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
         } else if (args[1] == "-l") {
-            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt(), false)
+            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt())
         }
     } else if (args.size == 4) {
-        runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt(), args[3].toBoolean())
+        runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt())
     } else {
         println("unsupported function, exiting...")
         exitProcess(-1)

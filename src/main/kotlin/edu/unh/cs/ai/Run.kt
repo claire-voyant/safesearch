@@ -12,7 +12,7 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
     println("Running SZero!")
     val runner = SafeLssLrtaStarRunner(start)
     var actionList: List<ActionBundle>
-    var timeTaken: Long = 0
+    var timeTaken: Long
     var totalTime: Long = 0
     val singleStepLookahead = true
 
@@ -32,10 +32,10 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
             }
         }
         totalTime += timeTaken
-        if (60 <= (totalTime / 1000)) {
-            System.err.println("Exceeded allowed time, exiting...")
-            exitProcess(-1)
-        }
+//        if (60 <= (totalTime / 1000)) {
+//            System.err.println("Exceeded allowed time, exiting...")
+//            exitProcess(-1)
+//        }
         currentState.visualize()
     }
     val pathLength = actions.size
@@ -48,14 +48,19 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
     } else {
         println("Failed!")
     }
+    println("Safe Nodes: " )
+    var numSafeNodes = 0
+    runner.nodes.forEach { state, safeNode -> if (safeNode.safe) { println(safeNode) ; ++numSafeNodes } }
+    println("$numSafeNodes total safe nodes.")
+
     println("Time taken: $totalTime ms")
 }
 
-fun <T> runLssLrtaStar(start: State<T>, iterations: Int, safetyFlag: Boolean) {
+fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
     println("Running LssLrtaStar!")
     val runner = LssLrtaStarRunner(start)
     var actionList: List<ActionBundle>
-    var timeTaken: Long = 0
+    var timeTaken: Long
     var totalTime: Long = 0
     val singleStepLookahead = true
 

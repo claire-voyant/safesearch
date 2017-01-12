@@ -1,6 +1,7 @@
 package edu.unh.cs.ai
 
 import java.util.*
+import kotlin.Pair
 import kotlin.system.measureTimeMillis
 
 /**
@@ -74,7 +75,8 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         initializeAStar()
         nodesGenerated++
 
-        val node = SafeNode(null, start, Action.START, 0.0, 0.0, false, iterationCounter, start.heuristic(), false)
+        val node = SafeNode(null, start, Action.START, 0.0, 0.0, false, iterationCounter,
+                start.heuristic(), start.isSafe())
         val startState = start
         nodes[startState] = node
         var currentNode = node
@@ -223,6 +225,59 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         }
     }
 
+    private fun updateSafeNodes(): Unit {
+        val safeNodes = nodes.values.filter { it.safe }.toMutableList()
+        while (!safeNodes.isEmpty()) {
+            val safeNode = safeNodes.first()
+            var currentParent = safeNode.parent
+            while (currentParent != null) {
+                currentParent.safe = safeNode.safe
+                currentParent = currentParent.parent
+            }
+            safeNodes.remove(safeNode)
+        }
+    }
+
+    private fun safeNodeOnOpen(): Pair<Action, Double> {
+        val placeBackOnOpen = ArrayList<SafeNode<T>?>()
+        var topOfOpen = openList.pop()
+        placeBackOnOpen.add(topOfOpen)
+        // pop off open until we find the safe node
+        while (!topOfOpen!!.safe && openList.isNotEmpty()) {
+            topOfOpen = openList.pop()
+            placeBackOnOpen.add(topOfOpen)
+        }
+        // if the open list is empty there is no
+        // safe node on open to travel up
+        // return -1 and do what LSS does
+        if (openList.isEmpty()) {
+            return Pair(Action.START, -1.0)
+        }
+        // open list had something safe on it
+        // travel up the parent of the first safe node
+        // until we reach the root
+        var currentParent = topOfOpen.parent
+        if (currentParent != null && currentParent.parent != null) {
+            while (currentParent!!.parent!!.parent != null) {
+                currentParent = currentParent.parent
+            }
+        }
+        // place all of our nodes back onto open
+        // make sure open list is ordered appropriately
+        // for the next iteration
+        // place all of our nodes back onto open
+        while (placeBackOnOpen.isNotEmpty()) {
+            val openTop: SafeNode<T> = placeBackOnOpen.first()!!
+            placeBackOnOpen.remove(openTop)
+            openList.add(openTop)
+        }
+        // make sure open list is ordered appropriately
+        // for the next iteration
+        println("open list? : ${openList.isEmpty()}")
+        openList.reorder(fComparator)
+        return Pair(currentParent!!.action, currentParent.g)
+    }
+
     private fun extractPlan(targetNode: SafeNode<T>, sourceState: State<T>): List<ActionBundle> {
         val actions = ArrayList<ActionBundle>(1000)
         var currentNode = targetNode
@@ -230,10 +285,17 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         if (targetNode.state == sourceState) {
             return emptyList()
         }
+        var done = 0
         do {
-            actions.add(ActionBundle(currentNode.action, currentNode.g))
+            val safestNodeOnOpen: Pair<Action, Double> = safeNodeOnOpen()
+            if (safestNodeOnOpen.second == -1.0) { // -1.0 means no safe node on open do what lss does...
+                actions.add(ActionBundle(currentNode.action, currentNode.g))
+            } else {
+                actions.add(ActionBundle(safestNodeOnOpen.first, safestNodeOnOpen.second))
+            }
+            done++
             currentNode = currentNode?.parent!!
-        } while (currentNode.state != sourceState)
+        } while (/*currentNode.state != sourceState || */ done < 0)
 
         return actions.reversed()
     }
@@ -254,10 +316,11 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         var plan: List<ActionBundle>? = null
         aStarTimer += measureTimeMillis {
             val targetNode = aStar(state)
+            updateSafeNodes()
             plan = extractPlan(targetNode, state)
             rootState = targetNode.state
         }
-        reset()
+//        reset()
         return plan!!
     }
 }
