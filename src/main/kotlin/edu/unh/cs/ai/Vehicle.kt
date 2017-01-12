@@ -38,8 +38,10 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
     }
 
     override fun isGoal(): Boolean {
-        if (agentLocation.x == goalLocation.x && agentLocation.y == goalLocation.y) {
-            return true
+        if (this != invalidState) {
+            if (agentLocation.x == goalLocation.x && agentLocation.y == goalLocation.y) {
+                return true
+            }
         }
         return false
     }
@@ -56,7 +58,7 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
         return successors
     }
 
-    fun validObstacleLocation(obstacle: Pair) : Boolean {
+    fun validObstacleLocation(obstacle: Pair): Boolean {
         if (obstacle.x >= 0 && obstacle.x < dimension.width) {
             if (obstacle.y >= 0 && obstacle.y < dimension.height) {
                 return true
@@ -64,12 +66,14 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
         }
         return false
     }
+
     fun moveObstacles(obstacles: ArrayList<Pair>): ArrayList<Pair> {
         val newObstacles = ArrayList<Pair>(obstacles.size)
         obstacles.forEachIndexed { i, pair ->
             val oldObstaclePair = Pair(pair.x, pair.y)
             val newObstaclePair = Pair(pair.x + obstacleVelocities[i].x, pair.y + obstacleVelocities[i].y)
-            if (bunkers.contains(newObstaclePair) || !validObstacleLocation(newObstaclePair)) {
+            if (bunkers.contains(newObstaclePair) || !validObstacleLocation(newObstaclePair) ||
+                    (goalLocation.x == newObstaclePair.x && goalLocation.y == newObstaclePair.y)) {
                 // if the new obstacle location would be a bunker
                 // add the old location and bounce the velocities
                 newObstacles.add(oldObstaclePair)
@@ -83,10 +87,10 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
     }
 
     override fun transition(action: Action): State<VehicleState> {
-        visualize()
+//        visualize()
         val movedObstacles = moveObstacles(obstacles)
         val candidateState = VehicleState(dimension, Pair(agentLocation.x, agentLocation.y), goalLocation, movedObstacles, bunkers, obstacleVelocities)
-        candidateState.visualize()
+//        candidateState.visualize()
 
         if (action == Action.NORTH) {
             candidateState.agentLocation.y -= 1

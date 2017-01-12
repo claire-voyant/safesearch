@@ -96,8 +96,10 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
     }
 
     override fun isGoal(): Boolean {
-        if (agentLocation.x == goalLocation.x && agentLocation.y == goalLocation.y) {
-            return true
+        if (this != invalidState) {
+            if (agentLocation.x == goalLocation.x && agentLocation.y == goalLocation.y) {
+                return true
+            }
         }
         return false
     }

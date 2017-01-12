@@ -13,6 +13,7 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int, safetyFlag: Boolean) {
     var actionList: List<ActionBundle>
     var timeTaken: Long = 0
     val singleStepLookahead = true
+
     val actions: MutableList<Action> = arrayListOf()
     runner.maximumIterations = iterations
 
@@ -28,11 +29,15 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int, safetyFlag: Boolean) {
                 actions.add(it.action)
             }
         }
+        currentState.visualize()
 //        println("Agent return actions: |${actionList.size}| to state $currentState")
     }
     val pathLength = actions.size
     println("$pathLength Actions taken:")
     actions.forEach(::println)
+    println("Final state: " )
+    currentState.visualize()
+    if(currentState.isGoal()) { println("Success!") } else { println("Failed!") }
     println("Time taken: $timeTaken ms")
 }
 
