@@ -84,8 +84,8 @@ fun readVehicleDomain(input: Scanner): State<VehicleState> {
     val velocities = ArrayList<Pair>(1000)
     (0..999).forEach {
         velocities.add(
-                if (random.nextBoolean()) Pair(random.nextInt(1) + 1, 0)
-                else Pair(0, random.nextInt(1) + 1)
+                if (random.nextBoolean()) Pair(random.nextInt(1) + 1, random.nextInt(1))
+                else Pair(random.nextInt(1), random.nextInt(1) + 1)
         )
     }
     return VehicleState(Dimensions(width, height), Pair(agentX, agentY), Pair(goalX, goalY), obstacles, bunkers, velocities)

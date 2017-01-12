@@ -30,6 +30,10 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
         return "Agent@ : $agentLocation Goal@: $goalLocation heuristic@: ${heuristic()}"
     }
 
+    override fun isSafe(): Boolean {
+        return isGoal()
+    }
+
     override fun visualize(): Unit {
         (0..dimension.height - 1).forEach { y ->
             (0..dimension.width - 1).forEach { x ->
@@ -101,7 +105,7 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
         possibleActions.forEach {
             val candidateSuccessor = transition(it)
             if (invalidState != candidateSuccessor) {
-                successors.add(SafeNode(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0))
+                successors.add(SafeNode(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0, isSafe()))
             }
         }
         return successors

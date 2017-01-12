@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
     println("arg3: [ITERATIONS] | -s [SAFETY_FLAG]")
     println("provide problem in standard input < [PROBLEM-FILE]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
-    val inputFile = Scanner(File("./input/vehicle/small.v"))
+    val inputFile = Scanner(File("./input/vehicle/vehicle0.v"))
     var startGridWorld: State<GridWorldState> = initializeDummyGridWorld()
     var startVehicle: State<VehicleState> = initializeDummyVehicle()
     if (args[0] == "-g") {
@@ -54,7 +54,7 @@ fun main(args: Array<String>) {
     } else if (args.size == 3) {
         if (args[1] == "-l" && args[2] == "-s") {
             /** TODO: run safe search*/
-            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, 10, true)
+            runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
         } else if (args[1] == "-l") {
             runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt(), false)
         }

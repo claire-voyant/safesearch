@@ -32,6 +32,13 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
         return "Agent@ : $agentLocation Goal@: $goalLocation heuristic@: ${heuristic()}"
     }
 
+    override fun isSafe(): Boolean {
+        if (bunkers.contains(agentLocation) || isGoal()) {
+            return true
+        }
+        return false
+    }
+
     override fun heuristic(): Double {
         return ((Math.abs(agentLocation.x - goalLocation.x)) +
                 (Math.abs(agentLocation.y - goalLocation.y))).toDouble()
@@ -64,7 +71,7 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
         possibleActions.forEach {
             val candidateSuccessor = transition(it)
             if (invalidState != candidateSuccessor) {
-                successors.add(SafeNode(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0))
+                successors.add(SafeNode(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0, candidateSuccessor.isSafe()))
             }
         }
         return successors

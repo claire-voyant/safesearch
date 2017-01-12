@@ -9,7 +9,8 @@ import kotlin.system.measureTimeMillis
  */
 
 data class SafeNode<T>(var parent: SafeNode<T>?, val state: State<T>, var action: Action, var g: Double,
-                   var f: Double, var open: Boolean, var iteration: Int, var heuristic: Double) : Indexable {
+                       var f: Double, var open: Boolean, var iteration: Int, var heuristic: Double,
+                       var safe: Boolean) : Indexable {
     override var index: Int = -1
     val predecessors: MutableList<SafeLssLrtaStarRunner.Edge<T>> = arrayListOf()
     override fun toString(): String {
@@ -73,7 +74,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         initializeAStar()
         nodesGenerated++
 
-        val node = SafeNode(null, start, Action.START, 0.0, 0.0, false, iterationCounter, start.heuristic())
+        val node = SafeNode(null, start, Action.START, 0.0, 0.0, false, iterationCounter, start.heuristic(), false)
         val startState = start
         nodes[startState] = node
         var currentNode = node
@@ -116,7 +117,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
             val successorState = successor.state
             val successorNode = getNode(sourceNode, successor)
 
-            if(!successorNode.predecessors.contains(Edge(node = sourceNode, action = successor.action))){
+            if (!successorNode.predecessors.contains(Edge(node = sourceNode, action = successor.action))) {
                 successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
             }
 
@@ -163,7 +164,8 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
                     g = kotlin.Double.MAX_VALUE,
                     iteration = iterationCounter,
                     open = false,
-                    f = kotlin.Double.MAX_VALUE)
+                    f = kotlin.Double.MAX_VALUE,
+                    safe = successorState.isSafe())
 
             nodes[successorState] = undiscoveredNode
             undiscoveredNode
@@ -255,6 +257,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
             plan = extractPlan(targetNode, state)
             rootState = targetNode.state
         }
+        reset()
         return plan!!
     }
 }

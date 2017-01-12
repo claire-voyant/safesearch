@@ -14,6 +14,7 @@ interface Expandable<T> {
     fun isGoal() : Boolean
     fun transition(action: Action) : State<T>
     fun validState() : Boolean
+    fun isSafe() : Boolean
 }
 
 interface Visual<T> {
