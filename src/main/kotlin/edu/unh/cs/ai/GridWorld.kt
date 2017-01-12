@@ -95,6 +95,18 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
         return successors
     }
 
+    override fun safe_successors(): ArrayList<SafeNode<GridWorldState>> {
+        val successors = ArrayList<SafeNode<GridWorldState>>()
+        val possibleActions = ArrayList<Action>(Action.values().asList())
+        possibleActions.forEach {
+            val candidateSuccessor = transition(it)
+            if (invalidState != candidateSuccessor) {
+                successors.add(SafeNode(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0))
+            }
+        }
+        return successors
+    }
+
     override fun isGoal(): Boolean {
         if (this != invalidState) {
             if (agentLocation.x == goalLocation.x && agentLocation.y == goalLocation.y) {

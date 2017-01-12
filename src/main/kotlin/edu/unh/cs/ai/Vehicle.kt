@@ -58,6 +58,18 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
         return successors
     }
 
+    override fun safe_successors(): ArrayList<SafeNode<VehicleState>> {
+        val successors = ArrayList<SafeNode<VehicleState>>()
+        val possibleActions = ArrayList<Action>(Action.values().asList())
+        possibleActions.forEach {
+            val candidateSuccessor = transition(it)
+            if (invalidState != candidateSuccessor) {
+                successors.add(SafeNode(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0))
+            }
+        }
+        return successors
+    }
+
     fun validObstacleLocation(obstacle: Pair): Boolean {
         if (obstacle.x >= 0 && obstacle.x < dimension.width) {
             if (obstacle.y >= 0 && obstacle.y < dimension.height) {

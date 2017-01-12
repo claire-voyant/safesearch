@@ -10,6 +10,7 @@ import java.util.*
 interface Expandable<T> {
     fun heuristic() : Double
     fun successors() : ArrayList<Node<T>>
+    fun safe_successors() : ArrayList<SafeNode<T>>
     fun isGoal() : Boolean
     fun transition(action: Action) : State<T>
     fun validState() : Boolean
