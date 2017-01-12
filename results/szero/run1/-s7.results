@@ -1,0 +1,76 @@
+Safe Real-Time Search
+arg1: -g [GRIDWORLD] | -v [VEHICLE]
+arg2: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]
+arg3: [ITERATIONS] | -s [SAFETY_FLAG]
+provide problem in standard input < [PROBLEM-FILE]
+	[0] -v
+	[1] -l
+	[2] -s
+Running Vehicle...
+Given problem: 
+@____$_
+##___$_
+$#_#$__
+#$_#$#_
+__#____
+$__#___
+$#$___*
+
+Running SZero!
+open list? : false
+#@___$_
+_##__$_
+$___$__
+#$##$_#
+___#___
+$#_____
+$_$___*
+
+open list? : false
+#_@__$_
+___#_$_
+$#__$__
+#$##$_#
+___##__
+$______
+$#$___*
+
+open list? : false
+___@_$_
+#_#__$_
+$#_#$__
+#$_#$#_
+_____#_
+$__#___
+$#$___*
+
+open list? : false
+____@$_
+##_#_$_
+$___$__
+#$_#$#_
+______#
+$#_____
+$_$#__*
+
+open list? : false
+##_#_$_
+#___@$_
+$___$__
+#$#_$_#
+_#____#
+$______
+$_$#__*
+
+open list? : false
+#__#_$_
+##___$_
+$___@__
+#$#_$_#
+______#
+$#_____
+$_$#__*
+
+open list? : false
+
+Failed!

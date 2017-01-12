@@ -1,0 +1,28 @@
+Safe Real-Time Search
+arg1: -g [GRIDWORLD] | -v [VEHICLE]
+arg2: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]
+arg3: [ITERATIONS] | -s [SAFETY_FLAG]
+provide problem in standard input < [PROBLEM-FILE]
+	[0] -v
+	[1] -l
+Running Vehicle...
+Given problem: 
+@#_$$__
+____#__
+_$_$___
+____#__
+_#__$__
+$__$___
+##$$##*
+
+Running LssLrtaStar!
+_@#$$__
+_______
+_$_$#__
+_____#_
+__#_$__
+$#_$##_
+#_$$__*
+
+
+Failed!

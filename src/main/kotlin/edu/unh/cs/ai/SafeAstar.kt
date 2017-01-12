@@ -320,7 +320,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
             plan = extractPlan(targetNode, state)
             rootState = targetNode.state
         }
-        reset()
+//        reset()
         return plan!!
     }
 }

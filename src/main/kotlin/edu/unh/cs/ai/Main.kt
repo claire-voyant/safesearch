@@ -10,7 +10,9 @@ import kotlin.system.exitProcess
 
 val random = Random()
 
+
 fun main(args: Array<String>) {
+    random.setSeed(0)
     println("Safe Real-Time Search")
     println("arg1: -g [GRIDWORLD] | -v [VEHICLE]")
     println("arg2: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]")

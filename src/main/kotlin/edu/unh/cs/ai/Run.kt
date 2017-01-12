@@ -37,10 +37,11 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
             }
         }
         totalTime += timeTaken
-        if (60 <= (totalTime / 1000)) {
-            System.err.println("Exceeded allowed time, exiting...")
-            exitProcess(-1)
-        }
+//        if (60 <= (totalTime / 1000)) {
+//            System.err.println("Exceeded allowed time, exiting...")
+//            System.err.println("Failed!")
+//            exitProcess(-1)
+//        }
         currentState.visualize()
     }
     val pathLength = actions.size
@@ -48,11 +49,6 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
     actions.forEach(::println)
     println("Final state: ")
     currentState.visualize()
-    if (currentState.isGoal()) {
-        println("Success!")
-    } else {
-        println("Failed!")
-    }
     println("Safe Nodes: ")
     var numSafeNodes = 0
     runner.nodes.forEach { state, safeNode ->
@@ -94,10 +90,10 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
             }
         }
         totalTime += timeTaken
-        if (60 <= (totalTime / 1000)) {
-            System.err.println("Exceeded allowed time, exiting...")
-            exitProcess(-1)
-        }
+//        if (60 <= (totalTime / 1000)) {
+//            System.err.println("Exceeded allowed time, exiting...")
+//            exitProcess(-1)
+//        }
         currentState.visualize()
 //        println("Agent return actions: |${actionList.size}| to state $currentState")
     }
@@ -106,11 +102,6 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
     actions.forEach(::println)
     println("Final state: ")
     currentState.visualize()
-    if (currentState.isGoal()) {
-        println("Success!")
-    } else {
-        println("Failed!")
-    }
     println("Time taken: $totalTime ms")
 }
 

@@ -1,0 +1,520 @@
+Safe Real-Time Search
+arg1: -g [GRIDWORLD] | -v [VEHICLE]
+arg2: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]
+arg3: [ITERATIONS] | -s [SAFETY_FLAG]
+provide problem in standard input < [PROBLEM-FILE]
+	[0] -v
+	[1] -l
+	[2] -s
+Running Vehicle...
+Given problem: 
+@#_#_$#___
+#_$_$__$__
+_____###__
+_#_##_____
+#$__#_____
+_$__$$#___
+##$_____#_
+#_____##__
+$______#__
+$_$____$_*
+
+Running SZero!
+open list? : false
+_@#__$_#__
+_#$_$__$__
+_#__#__##_
+_____#____
+#$_##_____
+_$__$$____
+_#$___##__
+_#______#_
+$_____#___
+$_$____$_*
+
+open list? : false
+_#@#_$__#_
+_#$_$__$__
+________##
+____#_____
+#$___#____
+_$_#$$____
+_#$_____#_
+__#___#__#
+$#___#____
+$_$___#$_*
+
+open list? : false
+_##@_$___#
+_#$_$__$__
+____#____#
+__________
+#$__##____
+_$__$$____
+_#$#___#__
+___#_____#
+$___#_#___
+$#$___#$_*
+
+open list? : false
+_#_#@$___#
+_#$_$__$__
+____#____#
+__________
+#$__##____
+_$__$$____
+_#$___#___
+___##____#
+$__#______
+$#$___#$_*
+
+open list? : false
+#___#@__#_
+##$_$__$__
+____#____#
+_____#____
+#$__#_____
+_$__$$____
+#_$__#____
+_____#___#
+$###______
+$_$___#$_*
+
+open list? : false
+#___#$@#__
+#_$_$__$__
+_#___#___#
+____#_____
+#$________
+_$__$$____
+#_$_#_____
+_#____#__#
+$#________
+$_$#__#$_*
+
+open list? : false
+#___#$#@__
+_#$_$#_$__
+____#____#
+_#________
+#$__#_____
+_$__$$____
+_#$#______
+_______#_#
+$#________
+$_$#__#$_*
+
+open list? : false
+_#_#_$#_@_
+_#$_$#_$__
+____#____#
+_#________
+#$__#_____
+_$__$$____
+_#$#______
+________##
+$#________
+$_$#__#$_*
+
+open list? : false
+__#__$#__@
+#_$_$#_$__
+____#____#
+_#________
+#$__#_____
+_$__$$____
+##$#______
+_________#
+$#________
+$_$#__#$_*
+
+open list? : false
+_#_#_$#___
+_#$_$#_$_@
+____#____#
+_#________
+#$__#_____
+_$__$$____
+_#$#______
+_________#
+$#________
+$_$#__#$_*
+
+open list? : false
+#___#$_#__
+#_$_$__$__
+_#___#__#@
+____#_____
+#$________
+_$__$$____
+#_$#______
+_#______#_
+$#_#__#___
+$_$____$_*
+
+open list? : false
+#___#$__#_
+##$_$__$__
+____#__#__
+_____#___@
+#$__#_____
+_$__$$____
+#_$#______
+___#__##__
+$##_______
+$_$____$_*
+
+open list? : false
+##__#$___#
+_#$_$__$__
+____#_#___
+__________
+#$__##___@
+_$__$$____
+_#$#__#___
+______#___
+$__#______
+$#$____$_*
+
+open list? : false
+##__#$___#
+_#$_$__$__
+_____#____
+____#_____
+#$___#____
+_$_#$$#__@
+_#$_#_____
+_____#____
+$___#_____
+$#$____$_*
+
+open list? : false
+##__#$___#
+#_$_$__$__
+____#_____
+__________
+#$_####___
+_$__$$____
+#_$__#___@
+____#_____
+$____#____
+$#$____$_*
+
+open list? : false
+_#_#_$___#
+#_$_$__$__
+___##_____
+___#__#___
+#$__##____
+_$__$$____
+#_$___#___
+___#_____@
+$_____#___
+$#$____$_*
+
+open list? : false
+__#__$__#_
+_#$_$__$__
+__###_#___
+_____#____
+#$__#_____
+_$__$$____
+_#$____#__
+__#_______
+$#_____#_@
+$_$____$_*
+
+open list? : false
+_#_#_$_#__
+_#$#$_#$__
+_#___#____
+____#_____
+#$________
+_$__$$____
+_#$_____#_
+_#________
+$_______#_
+$_$____$_@
+
+18 Actions taken:
+EAST
+EAST
+EAST
+EAST
+EAST
+EAST
+EAST
+EAST
+EAST
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+Final state: 
+_#_#_$_#__
+_#$#$_#$__
+_#___#____
+____#_____
+#$________
+_$__$$____
+_#$_____#_
+_#________
+$_______#_
+$_$____$_@
+
+Safe Nodes: 
+SafeNode: [State: Agent@ : Pair(x=4, y=5) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 6.0, iteration: 8, parent: Agent@ : Pair(x=4, y=4) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 9.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=3) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=4, y=2) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 6.0, iteration: 6, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 0.0, iteration: 9, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 8.0, iteration: 9, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=4, y=2) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 0.0, iteration: 4, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 2.0, iteration: 6, parent: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 11.0, iteration: 6, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=1, y=0) Goal@: Pair(x=9, y=9) heuristic@: 17.0 h: 17.0, g: 0.0, iteration: 4, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 6.0, iteration: 8, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 15.0, iteration: 4, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 2.0, g: 2.0, iteration: 9, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 3.0, iteration: 8, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 10.0, iteration: 2, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 10.0, iteration: 2, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 14.0, iteration: 9, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 8.0, iteration: 2, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 4.0, g: 5.0, iteration: 9, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 15.0, iteration: 9, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 4.0, g: 0.0, iteration: 9, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 4.0, g: 10.0, iteration: 9, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 2.0, iteration: 4, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=5) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 9.0, iteration: 8, parent: Agent@ : Pair(x=6, y=5) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=5) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 9.0, iteration: 8, parent: Agent@ : Pair(x=6, y=5) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 12.0, iteration: 2, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 1.0, iteration: 5, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 4.0, iteration: 6, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 2.0, g: 12.0, iteration: 9, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 1.0, iteration: 8, parent: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 13.0, iteration: 2, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 8.0, iteration: 2, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 0.0, iteration: 4, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 0.0, iteration: 2, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 17.0, iteration: 6, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 4.0, iteration: 6, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 4.0, iteration: 6, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=1, y=0) Goal@: Pair(x=9, y=9) heuristic@: 17.0 h: 17.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=0, y=0) Goal@: Pair(x=9, y=9) heuristic@: 18.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 3.0, iteration: 4, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 9.0, iteration: 2, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 5.0, iteration: 4, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 1.0, iteration: 6, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 1.0, iteration: 6, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 5.0, iteration: 4, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=2, y=1) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 2.0, iteration: 4, parent: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 2.0, iteration: 4, parent: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 9.0, iteration: 6, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 4.0, iteration: 4, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 4.0, iteration: 4, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 11.0, iteration: 2, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 5.0, iteration: 8, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=2, y=1) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 1.0, iteration: 6, parent: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 1.0, iteration: 6, parent: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 14.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=0, y=0) Goal@: Pair(x=9, y=9) heuristic@: 18.0 h: 18.0, g: 0.0, iteration: 2, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 11.0, iteration: 2, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 0.0, iteration: 2, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 2.0, iteration: 6, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=5) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 8.0, iteration: 8, parent: Agent@ : Pair(x=5, y=5) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=5) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 7.0, g: 8.0, iteration: 8, parent: Agent@ : Pair(x=5, y=5) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=5) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 8.0, iteration: 8, parent: Agent@ : Pair(x=5, y=5) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 5.0, iteration: 2, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 2.0, iteration: 5, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 7.0, iteration: 9, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 7.0, iteration: 4, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 3.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 3.0, iteration: 6, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 3.0, iteration: 6, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 7.0, iteration: 6, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 0.0, iteration: 2, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 11.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 1.0, iteration: 9, parent: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 0.0, iteration: 8, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 2.0, g: 8.0, iteration: 9, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=4) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 5.0, iteration: 8, parent: Agent@ : Pair(x=4, y=3) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 18.0, iteration: 6, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 5.0, iteration: 4, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 5.0, iteration: 4, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 13.0, iteration: 9, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 1.0, iteration: 9, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 1.0, iteration: 9, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 11.0, iteration: 8, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 7.0, iteration: 4, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 0.0, iteration: 5, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 3.0, iteration: 6, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 18.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 10.0, iteration: 8, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 8.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 8.0, iteration: 6, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 10.0, g: 3.0, iteration: 4, parent: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0 h: 16.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=1, y=0) Goal@: Pair(x=9, y=9) heuristic@: 17.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 10.0, iteration: 6, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 16.0, iteration: 6, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 12.0, iteration: 6, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 12.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 8.0, iteration: 4, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 14.0, iteration: 6, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 1.0, iteration: 6, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 3.0, iteration: 8, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 5.0, iteration: 9, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 0.0, iteration: 9, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 0.0, iteration: 4, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 2.0, iteration: 8, parent: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 3.0, iteration: 6, parent: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 6.0, iteration: 8, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 9.0, iteration: 6, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 1.0, iteration: 8, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 12.0, iteration: 4, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 7.0, iteration: 4, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 4.0, iteration: 9, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 4.0, iteration: 9, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 6.0, iteration: 2, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 0.0, iteration: 6, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 7.0, iteration: 8, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 10.0, iteration: 9, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 10.0, g: 1.0, iteration: 8, parent: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 7.0, iteration: 6, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 7.0, iteration: 6, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 14.0, iteration: 8, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 3.0, iteration: 4, parent: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 11.0, iteration: 8, parent: Agent@ : Pair(x=8, y=5) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 9.0, iteration: 9, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 13.0, iteration: 2, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 18.0, iteration: 2, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 15.0, iteration: 6, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0 h: 16.0, g: 0.0, iteration: 6, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 16.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 6.0, g: 12.0, iteration: 6, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 19.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 2.0, iteration: 8, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 4.0, iteration: 6, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 2.0, iteration: 4, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 2.0, iteration: 4, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 17.0, iteration: 4, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 6.0, iteration: 2, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 0.0, iteration: 8, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=2, y=1) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 17.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 8.0, iteration: 6, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 8.0, iteration: 6, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 4.0, iteration: 9, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 9.0, iteration: 4, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 9.0, iteration: 4, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 0.0, iteration: 8, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 7.0, g: 7.0, iteration: 9, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 10.0, iteration: 4, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 11.0, iteration: 6, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 12.0, iteration: 8, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 10.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 5.0, iteration: 2, parent: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 3.0, iteration: 9, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 3.0, iteration: 9, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 6.0, iteration: 6, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0 h: 16.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=1, y=0) Goal@: Pair(x=9, y=9) heuristic@: 17.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 9.0, iteration: 4, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 11.0, iteration: 9, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 5.0, g: 4.0, iteration: 9, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 5.0, iteration: 9, parent: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 8.0, iteration: 2, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 15.0, iteration: 8, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 9.0, iteration: 8, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 3.0, iteration: 9, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 10.0, iteration: 6, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 13.0, iteration: 4, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 6.0, iteration: 6, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 13.0, iteration: 6, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 1.0, iteration: 9, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 7.0, g: 2.0, iteration: 9, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 7.0, iteration: 6, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 2.0, iteration: 8, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 14.0, g: 2.0, iteration: 8, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 6.0, iteration: 2, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 6.0, iteration: 2, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 9.0, iteration: 2, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 9.0, iteration: 2, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 2.0, iteration: 9, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 2.0, iteration: 9, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 6.0, iteration: 9, parent: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=5) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 10.0, iteration: 8, parent: Agent@ : Pair(x=7, y=5) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 14.0, iteration: 4, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 11.0, iteration: 4, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 8.0, iteration: 4, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 8.0, iteration: 4, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 3.0, iteration: 9, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 5.0, g: 9.0, iteration: 9, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 15.0, iteration: 2, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 10.0, iteration: 2, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 10.0, g: 2.0, iteration: 6, parent: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 0.0, iteration: 6, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 16.0, iteration: 2, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 12.0, iteration: 4, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 14.0, iteration: 2, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 5.0, iteration: 2, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 5.0, iteration: 2, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 10.0, iteration: 4, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=5) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 7.0, iteration: 8, parent: Agent@ : Pair(x=4, y=5) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=5) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 7.0, iteration: 8, parent: Agent@ : Pair(x=4, y=5) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 4.0, iteration: 4, parent: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 4.0, iteration: 4, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 13.0, iteration: 8, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 8.0, iteration: 8, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 16.0, iteration: 8, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 4.0, g: 6.0, iteration: 9, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 2.0, iteration: 4, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 3.0, iteration: 8, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 3.0, iteration: 8, parent: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=2) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 3.0, iteration: 8, parent: Agent@ : Pair(x=4, y=1) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 13.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 11.0, iteration: 9, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 5.0, iteration: 8, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+248 total safe nodes.
+Time taken: 142 ms
