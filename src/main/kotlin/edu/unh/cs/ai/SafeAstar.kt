@@ -100,17 +100,17 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         dijkstraTimer = 0L
         clearOpenList()
     }
-
-    fun computeActions(node: SafeNode<T>, startState: State<T>): ArrayList<Action> {
-        var currentNode: SafeNode<T>? = node
-        val actions = ArrayList<Action>()
-        while (startState != currentNode!!.state) {
-            actions.add(currentNode.action)
-            currentNode = currentNode.parent
-        }
-        actions.reverse()
-        return actions
-    }
+//
+//    fun computeActions(node: SafeNode<T>, startState: State<T>): ArrayList<Action> {
+//        var currentNode: SafeNode<T>? = node
+//        val actions = ArrayList<Action>()
+//        while (startState != currentNode!!.state) {
+//            actions.add(currentNode.action)
+//            currentNode = currentNode.parent
+//        }
+//        actions.reverse()
+//        return actions
+//    }
 
     fun expandNode(sourceNode: SafeNode<T>) {
         nodesExpanded++
@@ -320,7 +320,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
             plan = extractPlan(targetNode, state)
             rootState = targetNode.state
         }
-//        reset()
+        reset()
         return plan!!
     }
 }

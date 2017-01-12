@@ -11,7 +11,7 @@ import kotlin.system.measureTimeMillis
 fun <T> runSZero(start: State<T>, iterations: Int) {
     println("Running SZero!")
     val runner = SafeLssLrtaStarRunner(start)
-    var actionList: List<ActionBundle>
+    var actionList: List<ActionBundle> //= listOf()
     var timeTaken: Long
     var totalTime: Long = 0
     val singleStepLookahead = true
@@ -22,7 +22,12 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
     var currentState = start
     while (!currentState.isGoal()) {
         timeTaken = measureTimeMillis {
-            actionList = runner.selectAction(currentState)
+            try {
+                actionList = runner.selectAction(currentState)
+            } catch (e: Exception) {
+                println("Failed!")
+                exitProcess(-1)
+            }
             if (actionList.size > 1 && singleStepLookahead) {
                 actionList = listOf(actionList.first())
             }
@@ -32,25 +37,29 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
             }
         }
         totalTime += timeTaken
-//        if (60 <= (totalTime / 1000)) {
-//            System.err.println("Exceeded allowed time, exiting...")
-//            exitProcess(-1)
-//        }
+        if (60 <= (totalTime / 1000)) {
+            System.err.println("Exceeded allowed time, exiting...")
+            exitProcess(-1)
+        }
         currentState.visualize()
     }
     val pathLength = actions.size
     println("$pathLength Actions taken:")
     actions.forEach(::println)
-    println("Final state: " )
+    println("Final state: ")
     currentState.visualize()
-    if(currentState.isGoal()) {
+    if (currentState.isGoal()) {
         println("Success!")
     } else {
         println("Failed!")
     }
-    println("Safe Nodes: " )
+    println("Safe Nodes: ")
     var numSafeNodes = 0
-    runner.nodes.forEach { state, safeNode -> if (safeNode.safe) { println(safeNode) ; ++numSafeNodes } }
+    runner.nodes.forEach { state, safeNode ->
+        if (safeNode.safe) {
+            println(safeNode); ++numSafeNodes
+        }
+    }
     println("$numSafeNodes total safe nodes.")
 
     println("Time taken: $totalTime ms")
@@ -59,7 +68,7 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
 fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
     println("Running LssLrtaStar!")
     val runner = LssLrtaStarRunner(start)
-    var actionList: List<ActionBundle>
+    var actionList: List<ActionBundle> //= listOf()
     var timeTaken: Long
     var totalTime: Long = 0
     val singleStepLookahead = true
@@ -70,7 +79,12 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
     var currentState = start
     while (!currentState.isGoal()) {
         timeTaken = measureTimeMillis {
-            actionList = runner.selectAction(currentState)
+            try {
+                actionList = runner.selectAction(currentState)
+            } catch (e: Exception) {
+                println("Failed!")
+                exitProcess(-1)
+            }
             if (actionList.size > 1 && singleStepLookahead) {
                 actionList = listOf(actionList.first()) // Trim the action list to one item
             }
@@ -105,14 +119,20 @@ fun <T> runAStar(start: State<T>) {
     val runner = LssLrtaStarRunner(start)
     val singleStepLookahead = false
     var timeTaken: Long = 0
-    var actionList: List<ActionBundle>
+    var actionList: List<ActionBundle> //= listOf()
     val actions: MutableList<Action> = arrayListOf()
-    runner.maximumIterations = kotlin.Int.MAX_VALUE
 
+    runner.maximumIterations = kotlin.Int.MAX_VALUE
     var currentState = start
+
     while (!currentState.isGoal()) {
         timeTaken = measureTimeMillis {
-            actionList = runner.selectAction(currentState)
+            try {
+                actionList = runner.selectAction(currentState)
+            } catch (e: Exception) {
+                println("Failed!")
+                exitProcess(-1)
+            }
             if (actionList.size > 1 && singleStepLookahead) {
                 actionList = listOf(actionList.first()) // Trim the action list to one item
             }

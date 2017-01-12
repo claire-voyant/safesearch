@@ -99,16 +99,16 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
         clearOpenList()
     }
 
-    fun computeActions(node: Node<T>, startState: State<T>): ArrayList<Action> {
-        var currentNode: Node<T>? = node
-        val actions = ArrayList<Action>()
-        while (startState != currentNode!!.state) {
-            actions.add(currentNode.action)
-            currentNode = currentNode.parent
-        }
-        actions.reverse()
-        return actions
-    }
+//    fun computeActions(node: Node<T>, startState: State<T>): ArrayList<Action> {
+//        var currentNode: Node<T>? = node
+//        val actions = ArrayList<Action>()
+//        while (startState != currentNode!!.state) {
+//            actions.add(currentNode.action)
+//            currentNode = currentNode.parent
+//        }
+//        actions.reverse()
+//        return actions
+//    }
 
     fun expandNode(sourceNode: Node<T>) {
         nodesExpanded++
@@ -256,6 +256,7 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
             plan = extractPlan(targetNode, state)
             rootState = targetNode.state
         }
+        reset()
         return plan!!
     }
 }
