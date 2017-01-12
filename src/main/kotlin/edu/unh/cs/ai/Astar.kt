@@ -256,7 +256,6 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
             plan = extractPlan(targetNode, state)
             rootState = targetNode.state
         }
-//        reset()
         return plan!!
     }
 }
