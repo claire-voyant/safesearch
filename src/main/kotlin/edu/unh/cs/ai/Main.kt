@@ -17,6 +17,7 @@ fun main(args: Array<String>) {
     println("arg1: -g [GRIDWORLD] | -v [VEHICLE]")
     println("arg2: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]")
     println("arg3: [ITERATIONS] | -s [SAFETY_FLAG]")
+    println("arg4: [VERSION = 0.0 1.0]")
     println("provide problem in standard input < [PROBLEM-FILE]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
 

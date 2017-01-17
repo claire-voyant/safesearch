@@ -190,12 +190,12 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         node.open = true
     }
 
-    private fun clearOpenList() {
+//    private fun clearOpenList() {
 //    println("Clear open list")
-        openList.applyAndClear {
-            it.open = false
-        }
-    }
+//        openList.applyAndClear {
+//            it.open = false
+//        }
+//    }
 
     inline fun measureInt(property: () -> Int, block: () -> Unit): Int {
         val initialPropertyValue = property()
@@ -233,9 +233,23 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         while (!safeNodes.isEmpty()) {
             val safeNode = safeNodes.first()
             var currentParent = safeNode.parent
+            // always update the safe nodes
+            // through the parent pointers
             while (currentParent != null) {
                 currentParent.safe = safeNode.safe
                 currentParent = currentParent.parent
+            }
+            // update the safe nodes of predecessors
+            // also if our version is 1.0
+            if (version == 1.0) {
+                val predecessors = safeNode.predecessors
+                (0..predecessors.size - 1).forEach {
+                    var currentPredecessor : SafeNode<T>? = predecessors[it].node
+                    while (currentPredecessor != null) {
+                        currentPredecessor.safe = safeNode.safe
+                        currentPredecessor = currentPredecessor.parent
+                    }
+                }
             }
             safeNodes.remove(safeNode)
         }

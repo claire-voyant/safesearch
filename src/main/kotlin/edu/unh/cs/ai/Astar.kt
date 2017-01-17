@@ -117,7 +117,7 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
             val successorState = successor.state
             val successorNode = getNode(sourceNode, successor)
 
-            if(!successorNode.predecessors.contains(Edge(node = sourceNode, action = successor.action))){
+            if (!successorNode.predecessors.contains(Edge(node = sourceNode, action = successor.action))) {
                 successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
             }
 
@@ -184,12 +184,12 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
         node.open = true
     }
 
-    private fun clearOpenList() {
+//    private fun clearOpenList() {
 //    println("Clear open list")
-        openList.applyAndClear {
-            it.open = false
-        }
-    }
+//        openList.applyAndClear {
+//            it.open = false
+//        }
+//    }
 
     inline fun measureInt(property: () -> Int, block: () -> Unit): Int {
         val initialPropertyValue = property()
