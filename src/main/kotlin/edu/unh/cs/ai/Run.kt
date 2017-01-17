@@ -8,6 +8,60 @@ import kotlin.system.measureTimeMillis
  * Created by willi on 1/5/2017.
  */
 
+fun <T> runSOne(start: State<T>, iterations: Int) {
+    println("Running SZero!")
+    val runner = SafeLssLrtaStarRunner(start)
+    var actionList: List<ActionBundle> //= listOf()
+    var timeTaken: Long
+    var totalTime: Long = 0
+    val singleStepLookahead = true
+
+    val actions: MutableList<Action> = arrayListOf()
+    runner.maximumIterations = iterations
+    runner.version = 1.0
+
+    var currentState = start
+    while (!currentState.isGoal()) {
+        timeTaken = measureTimeMillis {
+            try {
+                actionList = runner.selectAction(currentState)
+            } catch (e: Exception) {
+                println("Failed!")
+                exitProcess(-1)
+            }
+            if (actionList.size > 1 && singleStepLookahead) {
+                actionList = listOf(actionList.first())
+            }
+            actionList.forEach {
+                currentState = currentState.transition(it.action)
+                actions.add(it.action)
+            }
+        }
+        totalTime += timeTaken
+//        if (60 <= (totalTime / 1000)) {
+//            System.err.println("Exceeded allowed time, exiting...")
+//            System.err.println("Failed!")
+//            exitProcess(-1)
+//        }
+        currentState.visualize()
+    }
+    val pathLength = actions.size
+    println("$pathLength Actions taken:")
+    actions.forEach(::println)
+    println("Final state: ")
+    currentState.visualize()
+    println("Safe Nodes: ")
+    var numSafeNodes = 0
+    runner.nodes.forEach { state, safeNode ->
+        if (safeNode.safe) {
+            println(safeNode); ++numSafeNodes
+        }
+    }
+    println("$numSafeNodes total safe nodes.")
+
+    println("Time taken: $totalTime ms")
+}
+
 fun <T> runSZero(start: State<T>, iterations: Int) {
     println("Running SZero!")
     val runner = SafeLssLrtaStarRunner(start)
@@ -18,6 +72,7 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
 
     val actions: MutableList<Action> = arrayListOf()
     runner.maximumIterations = iterations
+    runner.version = 0.0
 
     var currentState = start
     while (!currentState.isGoal()) {
