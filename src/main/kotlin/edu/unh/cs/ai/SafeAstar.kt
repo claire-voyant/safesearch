@@ -22,6 +22,9 @@ data class SafeNode<T>(var parent: SafeNode<T>?, val state: State<T>, var action
 
 
 data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
+
+    var version = 0.0
+
     data class Edge<T>(val node: SafeNode<T>, val action: Action)
 
     private val fComparator = Comparator<SafeNode<T>> { lhs, rhs ->
@@ -92,14 +95,14 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         return currentNode
     }
 
-    fun reset() {
-        rootState = null
-        aStarPopCounter = 0
-        dijkstraPopCounter = 0
-        aStarTimer = 0L
-        dijkstraTimer = 0L
-        clearOpenList()
-    }
+//    fun reset() {
+//        rootState = null
+//        aStarPopCounter = 0
+//        dijkstraPopCounter = 0
+//        aStarTimer = 0L
+//        dijkstraTimer = 0L
+//        clearOpenList()
+//    }
 //
 //    fun computeActions(node: SafeNode<T>, startState: State<T>): ArrayList<Action> {
 //        var currentNode: SafeNode<T>? = node

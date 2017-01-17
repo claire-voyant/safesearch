@@ -90,14 +90,14 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
         return currentNode
     }
 
-    fun reset() {
-        rootState = null
-        aStarPopCounter = 0
-        dijkstraPopCounter = 0
-        aStarTimer = 0L
-        dijkstraTimer = 0L
-        clearOpenList()
-    }
+//    fun reset() {
+//        rootState = null
+//        aStarPopCounter = 0
+//        dijkstraPopCounter = 0
+//        aStarTimer = 0L
+//        dijkstraTimer = 0L
+//        clearOpenList()
+//    }
 
 //    fun computeActions(node: Node<T>, startState: State<T>): ArrayList<Action> {
 //        var currentNode: Node<T>? = node
