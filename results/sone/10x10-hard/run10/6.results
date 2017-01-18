@@ -1,0 +1,7838 @@
+Safe Real-Time Search
+arg1: -g [GRIDWORLD] | -v [VEHICLE]
+arg2: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]
+arg3: [ITERATIONS] | -s [SAFETY_FLAG]
+arg4: [VERSION = 0.0 1.0]
+provide problem in standard input < [PROBLEM-FILE]
+	[0] -v
+	[1] -l
+	[2] -s
+	[3] -1
+Running Vehicle...
+Given problem: 
+@___#__#__
+$#___$____
+#_$_#_$_$_
+___#__#$__
+#_______$_
+__________
+#_#$_#__#_
+$$_$#___$_
+_____#_$__
+$_#__#__$*
+
+Running SZero!
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 29
+open list? : false
+_@___#__#_
+$_#__$____
+_#$___$_$_
+#_#_#_#$__
+________$_
+#_#_____#_
+___$#_____
+$$_$____$_
+____#__$__
+$_#_#___$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 56
+open list? : false
+__@___#__#
+$__#_$____
+_#$___$_$_
+___#_#_$__
+#___#___$_
+________#_
+__#$#_____
+$$_$____$_
+__#__#_$__
+$___##__$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 82
+open list? : false
+___@___#_#
+$___#$____
+#_$___$_$_
+#_#_#__$__
+________$_
+#_#_#_____
+___$#___#_
+$$#$____$_
+____#__$__
+$___#___$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 107
+open list? : false
+____@___##
+$___#$____
+#_$___$_$_
+___#___$__
+________$_
+__________
+#_#$#___#_
+$$_$____$_
+___#___$__
+$___##__$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 131
+open list? : false
+_____@___#
+$__#_$____
+##$___$_$_
+__#_#__$__
+________$_
+__#_____#_
+#__$_#____
+$$#$#___$_
+__#____$__
+$___#___$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 154
+open list? : false
+______@__#
+$_#__$____
+##$___$_$_
+_#___#_$__
+__#_____$_
+________#_
+#__$__#___
+$$_$____$_
+_##_#__$__
+$__##___$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 172
+open list? : false
+_______@_#
+$#___$____
+#_$___$_$_
+#_#___#$__
+________$_
+__________
+#__$___##_
+$$_$____$_
+#______$__
+$_#_#___$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 190
+open list? : false
+_________#
+$#___$_@__
+#_$___$_$_
+#_#___#$__
+________$_
+#_________
+___$____#_
+$$_$____$_
+#______$__
+$##_#___$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 207
+open list? : false
+_________#
+$#___$__@_
+_#$___$_$_
+#_#___#$__
+#_______$_
+________#_
+___$_____#
+$$_$____$_
+#______$__
+$##_#___$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 223
+open list? : false
+_________#
+$#___$___@
+_#$___$_$_
+#_#___#$__
+________$_
+#_______#_
+___$_____#
+$$_$____$_
+#______$__
+$##_#___$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+safe nodes: 237
+open list? : false
+________#_
+$_#__$____
+#_$___$_$@
+#_#___#$__
+________$_
+__________
+#__$____##
+$$_$____$_
+#___#__$__
+$##_____$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+safe nodes: 250
+open list? : false
+_______#__
+$__#_$____
+#_$___$_$_
+#_#___#$_@
+________$_
+__________
+#__$____##
+$$_$#___$_
+#______$__
+$##_____$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+safe nodes: 261
+open list? : false
+______#___
+$___#$____
+##$___$_$_
+#_#___#$__
+________$@
+________#_
+#__$#____#
+$$_$____$_
+#______$__
+$##_____$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+safe nodes: 271
+open list? : false
+_____#____
+$___#$____
+##$___$_$_
+_#___#_$__
+__#_____$_
+____#___#@
+#__$_____#
+$$_$____$_
+_##____$__
+$_#_____$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+safe nodes: 279
+open list? : false
+____#_____
+$___#$____
+#_$___$_$_
+__#_#__$__
+____#___$_
+__#_______
+#__$____#@
+$$#$____$_
+__#____$__
+$__#____$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+safe nodes: 286
+open list? : false
+___#______
+$___#$____
+#_$___$_$_
+#__##__$__
+________$_
+#_________
+__#$___##_
+$$_$____$@
+___#___$__
+$___#___$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+safe nodes: 292
+open list? : false
+__#_______
+$__#_$____
+_#$_#_$_$_
+__#_#__$__
+#_______$_
+__#_____#_
+___$__#___
+$$#$____$_
+____#__$_@
+$____#__$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+safe nodes: 292
+open list? : false
+_#________
+$_#_#$____
+_#$___$_$_
+##___#_$__
+__#_____$_
+#_______#_
+___$_#____
+$$_$____$_
+__#__#_$__
+$_____#_$@
+
+18 Actions taken:
+EAST
+EAST
+EAST
+EAST
+EAST
+EAST
+EAST
+SOUTH
+EAST
+EAST
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+SOUTH
+Final state: 
+_#________
+$_#_#$____
+_#$___$_$_
+##___#_$__
+__#_____$_
+#_______#_
+___$_#____
+$$_$____$_
+__#__#_$__
+$_____#_$@
+
+Safe Nodes: 
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 15.0, iteration: 2, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 8.0, iteration: 9, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 8.0, iteration: 9, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 7.0, g: 7.0, iteration: 9, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 18.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 18.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0 h: 16.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=1, y=0) Goal@: Pair(x=9, y=9) heuristic@: 17.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 19.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 19.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 7.0, iteration: 6, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 7.0, iteration: 6, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 13.0, iteration: 2, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 9.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 9.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 9.0, iteration: 8, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 9.0, iteration: 8, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 11.0, iteration: 8, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 11.0, iteration: 8, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 6.0, iteration: 8, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 6.0, iteration: 8, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 13.0, iteration: 6, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 8.0, iteration: 2, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 8.0, iteration: 9, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 8.0, iteration: 9, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 0.0, iteration: 8, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 4.0, iteration: 6, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 2.0, iteration: 4, parent: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 7.0, iteration: 6, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 7.0, iteration: 6, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 0.0, iteration: 8, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 5.0, iteration: 4, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 5.0, iteration: 4, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 4.0, g: 0.0, iteration: 9, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 1.0, iteration: 9, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 1.0, iteration: 9, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 7.0, iteration: 6, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 12.0, iteration: 4, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 0.0, iteration: 9, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 13.0, iteration: 4, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 13.0, iteration: 4, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 4.0, iteration: 6, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 4.0, iteration: 6, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 8.0, iteration: 6, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 8.0, iteration: 6, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 16.0, iteration: 8, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 16.0, iteration: 8, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 11.0, iteration: 9, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 7.0, g: 2.0, iteration: 9, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 5.0, iteration: 8, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=2) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 5.0, iteration: 8, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 5.0, iteration: 8, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 16.0, iteration: 2, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 1.0, iteration: 9, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 2.0, iteration: 8, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 3.0, iteration: 6, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 10.0, iteration: 2, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 9.0, iteration: 6, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 2.0, g: 2.0, iteration: 9, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 4.0, iteration: 9, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=2) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 4.0, iteration: 9, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 4.0, iteration: 9, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 1.0, iteration: 8, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 1.0, iteration: 8, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 10.0, iteration: 8, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 15.0, iteration: 4, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=1, y=0) Goal@: Pair(x=9, y=9) heuristic@: 17.0 h: 17.0, g: 0.0, iteration: 4, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0 h: 16.0, g: 0.0, iteration: 6, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 12.0, iteration: 6, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 12.0, iteration: 6, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 9.0, iteration: 9, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 6.0, iteration: 6, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 15.0, iteration: 6, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 15.0, iteration: 6, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 5.0, iteration: 4, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 17.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 17.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 7.0, iteration: 4, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 3.0, iteration: 9, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 3.0, iteration: 9, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=1, y=0) Goal@: Pair(x=9, y=9) heuristic@: 17.0 h: 17.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=0, y=0) Goal@: Pair(x=9, y=9) heuristic@: 18.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=0, y=1) Goal@: Pair(x=9, y=9) heuristic@: 17.0 h: 17.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=0, y=0) Goal@: Pair(x=9, y=9) heuristic@: 18.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 14.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 14.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 9.0, iteration: 4, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 9.0, iteration: 4, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 0.0, iteration: 6, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 14.0, iteration: 6, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 3.0, iteration: 8, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 1.0, iteration: 9, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 8.0, iteration: 2, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 8.0, iteration: 2, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=2) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 8.0, iteration: 2, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 3.0, iteration: 9, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0 h: 15.0, g: 1.0, iteration: 6, parent: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 2.0, iteration: 9, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 2.0, iteration: 9, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 13.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 13.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 2.0, iteration: 6, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 10.0, iteration: 4, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 13.0, iteration: 2, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 16.0, iteration: 6, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 10.0, g: 3.0, iteration: 4, parent: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 11.0, iteration: 4, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 11.0, iteration: 4, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 12.0, iteration: 6, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 12.0, iteration: 6, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 10.0, iteration: 6, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 10.0, iteration: 6, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 2.0, iteration: 4, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 10.0, iteration: 4, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 0.0, iteration: 4, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 12.0, iteration: 4, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 17.0, iteration: 4, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 3.0, iteration: 6, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 3.0, iteration: 6, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 6.0, iteration: 2, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 12.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 12.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 4.0, iteration: 4, parent: Agent@ : Pair(x=9, y=0) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 12.0, iteration: 8, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 0.0, iteration: 4, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 4.0, iteration: 4, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 1.0, iteration: 6, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 8.0, iteration: 4, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 3.0, iteration: 4, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 3.0, iteration: 4, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 8.0, iteration: 4, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 18.0, iteration: 2, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 0.0, iteration: 5, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 5.0, iteration: 9, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 4.0, g: 10.0, iteration: 9, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 10.0, iteration: 9, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 8.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 8.0, iteration: 4, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 14.0, iteration: 2, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 14.0, iteration: 2, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 9.0, iteration: 2, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 9.0, iteration: 2, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 4.0, iteration: 4, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 5.0, iteration: 4, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=0) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 2.0, iteration: 4, parent: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 10.0, iteration: 6, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 10.0, iteration: 6, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 12.0, iteration: 2, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 12.0, iteration: 2, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=2) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 6.0, iteration: 9, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 1.0, iteration: 5, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 0.0, iteration: 6, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 10.0, iteration: 8, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 15.0, iteration: 8, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 5.0, iteration: 6, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 15.0, iteration: 9, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 15.0, iteration: 9, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 1.0, iteration: 8, parent: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 6.0, iteration: 6, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=2) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 6.0, iteration: 6, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 6.0, iteration: 6, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 5.0, iteration: 2, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 7.0, iteration: 8, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 0.0, iteration: 2, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 10.0, iteration: 2, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 10.0, iteration: 2, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 7.0, iteration: 2, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=2, y=0) Goal@: Pair(x=9, y=9) heuristic@: 16.0 h: 16.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=1, y=0) Goal@: Pair(x=9, y=9) heuristic@: 17.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 1.0, iteration: 8, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=0) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 3.0, iteration: 9, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 3.0, iteration: 9, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 0.0, iteration: 4, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 6.0, iteration: 8, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 7.0, iteration: 4, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 2.0, iteration: 5, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 2.0, iteration: 5, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 8.0, iteration: 6, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 0.0, iteration: 2, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 11.0, iteration: 8, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 11.0, iteration: 8, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 7.0, iteration: 8, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 7.0, iteration: 8, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 10.0, iteration: 9, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 10.0, iteration: 9, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 5.0, g: 4.0, iteration: 9, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 14.0, iteration: 8, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 14.0, iteration: 8, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 9.0, iteration: 4, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 3.0, iteration: 4, parent: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 5.0, g: 9.0, iteration: 9, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 11.0, iteration: 6, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 4.0, g: 5.0, iteration: 9, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 5.0, iteration: 9, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 2.0, iteration: 8, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 2.0, iteration: 8, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 13.0, iteration: 8, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0 h: 11.0, g: 6.0, iteration: 4, parent: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 8.0, iteration: 4, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 0.0, iteration: 2, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 4.0, iteration: 9, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 14.0, iteration: 9, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 8.0, iteration: 8, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 0.0, iteration: 8, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 6.0, iteration: 8, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 6.0, iteration: 8, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 9.0, iteration: 8, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 9.0, iteration: 8, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 16.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 16.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 1.0, iteration: 6, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 2.0, iteration: 2, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 14.0, iteration: 4, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 3.0, iteration: 8, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 7.0, iteration: 4, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=2) Goal@: Pair(x=9, y=9) heuristic@: 10.0 h: 10.0, g: 7.0, iteration: 4, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 7.0, iteration: 4, parent: Agent@ : Pair(x=6, y=1) Goal@: Pair(x=9, y=9) heuristic@: 11.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 8.0, iteration: 2, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 9.0, iteration: 2, parent: Agent@ : Pair(x=7, y=1) Goal@: Pair(x=9, y=9) heuristic@: 10.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 3.0, iteration: 2, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 5.0, iteration: 9, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 5.0, iteration: 9, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 9.0, iteration: 6, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 11.0, iteration: 6, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 2.0, iteration: 6, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 2.0, iteration: 6, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 13.0, iteration: 9, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 13.0, iteration: 9, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 8.0, iteration: 8, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 2.0, g: 7.0, iteration: 9, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 3.0, iteration: 6, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 3.0, iteration: 8, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 2.0, g: 12.0, iteration: 9, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=0, y=0) Goal@: Pair(x=9, y=9) heuristic@: 18.0 h: 18.0, g: 0.0, iteration: 2, parent: null, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 1.0, iteration: 4, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 7.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 4.0, iteration: 8, parent: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=4) Goal@: Pair(x=9, y=9) heuristic@: 6.0 h: 6.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0 h: 5.0, g: 4.0, iteration: 2, parent: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 6.0, iteration: 6, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 1.0, iteration: 2, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0 h: 13.0, g: 2.0, iteration: 8, parent: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 9.0, g: 5.0, iteration: 2, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 5.0, iteration: 2, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 1.0, g: 5.0, iteration: 8, parent: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 11.0, iteration: 2, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=6, y=0) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 6.0, iteration: 2, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=5, y=1) Goal@: Pair(x=9, y=9) heuristic@: 12.0 h: 12.0, g: 6.0, iteration: 2, parent: Agent@ : Pair(x=5, y=0) Goal@: Pair(x=9, y=9) heuristic@: 13.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 4.0, g: 5.0, iteration: 2, parent: Agent@ : Pair(x=9, y=5) Goal@: Pair(x=9, y=9) heuristic@: 4.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0 h: 0.0, g: 17.0, iteration: 6, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=9) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 1.0, g: 17.0, iteration: 6, parent: Agent@ : Pair(x=9, y=9) Goal@: Pair(x=9, y=9) heuristic@: 0.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=4, y=0) Goal@: Pair(x=9, y=9) heuristic@: 14.0 h: 14.0, g: 2.0, iteration: 6, parent: Agent@ : Pair(x=3, y=0) Goal@: Pair(x=9, y=9) heuristic@: 15.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 4.0, iteration: 6, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=2) Goal@: Pair(x=9, y=9) heuristic@: 7.0 h: 8.0, g: 6.0, iteration: 2, parent: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=8) Goal@: Pair(x=9, y=9) heuristic@: 1.0 h: 2.0, g: 11.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=7) Goal@: Pair(x=9, y=9) heuristic@: 3.0 h: 3.0, g: 11.0, iteration: 4, parent: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=7) Goal@: Pair(x=9, y=9) heuristic@: 2.0 h: 3.0, g: 11.0, iteration: 2, parent: Agent@ : Pair(x=9, y=6) Goal@: Pair(x=9, y=9) heuristic@: 3.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=4) Goal@: Pair(x=9, y=9) heuristic@: 5.0 h: 6.0, g: 5.0, iteration: 8, parent: Agent@ : Pair(x=9, y=3) Goal@: Pair(x=9, y=9) heuristic@: 6.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=9, y=1) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 6.0, iteration: 9, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: false ]
+SafeNode: [State: Agent@ : Pair(x=8, y=2) Goal@: Pair(x=9, y=9) heuristic@: 8.0 h: 8.0, g: 6.0, iteration: 9, parent: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0, open: true ]
+SafeNode: [State: Agent@ : Pair(x=8, y=1) Goal@: Pair(x=9, y=9) heuristic@: 9.0 h: 9.0, g: 0.0, iteration: 9, parent: null, open: false ]
+292 total safe nodes.
+Time taken: 175 ms

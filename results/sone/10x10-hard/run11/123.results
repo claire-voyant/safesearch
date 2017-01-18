@@ -1,0 +1,1513 @@
+Safe Real-Time Search
+arg1: -g [GRIDWORLD] | -v [VEHICLE]
+arg2: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]
+arg3: [ITERATIONS] | -s [SAFETY_FLAG]
+arg4: [VERSION = 0.0 1.0]
+provide problem in standard input < [PROBLEM-FILE]
+	[0] -v
+	[1] -l
+	[2] -s
+	[3] -1
+Running Vehicle...
+Given problem: 
+@#__$#____
+_#__#_#___
+$__$_#$#$_
+_______##_
+#__#__$#__
+#_###__##_
+_####$#$__
+______$___
+_##___#___
+_#$###_#$*
+
+Running SZero!
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 35
+open list? : false
+#@__$##___
+__#__#____
+$__$#_$#$_
+#_______#_
+____#_$#__
+___#_####_
+##_##$_$#_
+_##___$___
+_______#__
+#_$#_#_#$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 63
+open list? : false
+_#@_$_#___
+___#__#___
+$__$_#$#$_
+#_______#_
+_____#$___
+#__##_##_#
+_###_$#$__
+______$_#_
+________#_
+_#$_###_$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 94
+open list? : false
+__#@$_##__
+____#__#__
+$__$#_$#$_
+#_______#_
+_____#$___
+_##__####_
+####_$_$__
+______$___
+________##
+#_$__#__$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 118
+open list? : false
+_#__@_#_#_
+_____#__#_
+$__$#_$#$_
+________#_
+###__#$___
+#__#__####
+##_#_$_$__
+______$___
+________##
+#_$_###_$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 142
+open list? : false
+__#_$@#__#
+______#__#
+$__$#_$#$_
+_##_____#_
+_____#$___
+#_____##_#
+#__##$_$__
+______$___
+________##
+#_$#_#_#$*
+
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+added edge...
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+version 1.0
+0
+safe nodes: 163
+open list? : false
+
+Failed!

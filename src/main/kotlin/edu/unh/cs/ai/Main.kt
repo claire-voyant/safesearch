@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
     println("provide problem in standard input < [PROBLEM-FILE]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
 
-    val inputFile = Scanner(System.`in`)
+    val inputFile = Scanner(File("./input/vehicle/"))
     var startGridWorld: State<GridWorldState> = initializeDummyGridWorld()
     var startVehicle: State<VehicleState> = initializeDummyVehicle()
     if (args[0] == "-g") {
@@ -61,12 +61,20 @@ fun main(args: Array<String>) {
         } else if (args[1] == "-l") {
             runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt())
         }
-    } else if (args.size == 4) {
+    } else if (args.size >= 4) {
         if (args[1] == "-l" && args[2] == "-s") {
             if (args[3] == "-0") {
-                runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                if (args.size == 4) {
+                    runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                } else {
+                    runSZero(if (args[0] == "-g") startGridWorld else startVehicle, args[4].toInt())
+                }
             } else if (args[3] == "-1") {
-                runSOne(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                if (args.size == 4) {
+                    runSOne(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                } else {
+                    runSOne(if (args[0] == "-g") startGridWorld else startVehicle, args[4].toInt())
+                }
             }
         } else {
             runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt())

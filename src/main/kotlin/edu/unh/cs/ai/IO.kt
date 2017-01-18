@@ -81,8 +81,8 @@ fun readVehicleDomain(input: Scanner): State<VehicleState> {
         ++row
         col = 0
     }
-    val velocities = ArrayList<Pair>(1000)
-    (0..999).forEach {
+    val velocities = ArrayList<Pair>(10000)
+    (0..velocities.size-1).forEach {
         velocities.add(
                 if (random.nextBoolean()) Pair(random.nextInt(1) + 1, random.nextInt(1))
                 else Pair(random.nextInt(1), random.nextInt(1) + 1)
