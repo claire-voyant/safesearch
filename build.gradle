@@ -1,10 +1,8 @@
 group 'ai'
 version '1.0-SNAPSHOT'
-apply plugin: 'kotlin'
-apply plugin: 'application'
 
 buildscript {
-    ext.kotlin_version = '1.0.1-1'
+    ext.kotlin_version = '1.0.5'
 
     repositories {
         mavenCentral()
@@ -13,7 +11,8 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
-
+apply plugin: 'kotlin'
+apply plugin: 'application'
 
 mainClassName = "edu.unh.cs.ai.MainKt"
 
@@ -21,18 +20,8 @@ repositories {
     mavenCentral()
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.12'
-}
-
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
-    compile 'org.apache.commons:commons-math3:3.0'
-    compile 'commons-cli:commons-cli:1.3.1'
-
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
 }
 
 jar {

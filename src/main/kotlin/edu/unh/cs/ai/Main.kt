@@ -36,7 +36,7 @@ fun main(args: Array<String>) {
         exitProcess(-1)
     }
     println("Given problem: ")
-    if (args[0] == "-g") println(startGridWorld) else println(startVehicle)
+    if (args[0] == "-g") startGridWorld.visualize() else startVehicle.visualize()
     if (args.size == 2) {
         if (args[1] == "-a") {
             runAStar(if (args[0] == "-g") startGridWorld else startVehicle)
@@ -61,20 +61,12 @@ fun main(args: Array<String>) {
         } else if (args[1] == "-l") {
             runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt())
         }
-    } else if (args.size >= 4) {
+    } else if (args.size == 4) {
         if (args[1] == "-l" && args[2] == "-s") {
             if (args[3] == "-0") {
-                if (args.size == 4) {
-                    runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
-                } else {
-                    runSZero(if (args[0] == "-g") startGridWorld else startVehicle, args[4].toInt())
-                }
+                runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
             } else if (args[3] == "-1") {
-                if (args.size == 4) {
-                    runSOne(if (args[0] == "-g") startGridWorld else startVehicle, 10)
-                } else {
-                    runSOne(if (args[0] == "-g") startGridWorld else startVehicle, args[4].toInt())
-                }
+                runSOne(if (args[0] == "-g") startGridWorld else startVehicle, 10)
             }
         } else {
             runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt())

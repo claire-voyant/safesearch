@@ -123,7 +123,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
             val successorNode = getNode(sourceNode, successor)
 
             if (!successorNode.predecessors.contains(Edge(node = sourceNode, action = successor.action))) {
-//                println("added edge...")
+                println("added edge...")
                 successorNode.predecessors.add(Edge(node = sourceNode, action = successor.action))
             }
 
@@ -243,11 +243,11 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
             // update the safe nodes of predecessors
             // also if our version is 1.0
             if (version == 1.0) {
-//                println("version 1.0")
+                println("version 1.0")
                 val predecessors = safeNode.predecessors
                 (0..predecessors.size - 1).forEach {
-//                    println(it)
-                    var currentPredecessor: SafeNode<T>? = predecessors[it].node
+                    println(it)
+                    var currentPredecessor : SafeNode<T>? = predecessors[it].node
                     while (currentPredecessor != null) {
                         currentPredecessor.safe = safeNode.safe
                         currentPredecessor = currentPredecessor.parent
@@ -257,28 +257,16 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
             safeNodes.remove(safeNode)
         }
         val totalSafeNodes = nodes.values.filter { it.safe }.toMutableList()
-//        println("safe nodes: ${totalSafeNodes.size}")
+        println("safe nodes: ${totalSafeNodes.size}")
     }
 
     private fun safeNodeOnOpen(): Pair<Action, Double> {
         val placeBackOnOpen = ArrayList<SafeNode<T>?>()
         var topOfOpen = openList.pop()
-        var hasSafeTopLevelAction = false
         placeBackOnOpen.add(topOfOpen)
         // pop off open until we find the safe node
-        while (!hasSafeTopLevelAction && openList.isNotEmpty()) {
+        while (!topOfOpen!!.safe && openList.isNotEmpty()) {
             topOfOpen = openList.pop()
-            // check if the top level action is safe
-            var currentParent = topOfOpen?.parent
-            if (currentParent != null && currentParent.parent != null) {
-                while (currentParent!!.parent!!.parent != null) {
-                    currentParent = currentParent.parent
-                    // find the top level action node
-                }
-            }
-            if (currentParent!!.safe) {
-                hasSafeTopLevelAction = true
-            }
             placeBackOnOpen.add(topOfOpen)
         }
         // if the open list is empty there is no
@@ -290,7 +278,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         // open list had something safe on it
         // travel up the parent of the first safe node
         // until we reach the root
-        var currentParent = topOfOpen?.parent
+        var currentParent = topOfOpen.parent
         if (currentParent != null && currentParent.parent != null) {
             while (currentParent!!.parent!!.parent != null) {
                 currentParent = currentParent.parent
@@ -307,7 +295,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         }
         // make sure open list is ordered appropriately
         // for the next iteration
-//        println("open list? : ${openList.isEmpty()}")
+        println("open list? : ${openList.isEmpty()}")
         openList.reorder(fComparator)
         return Pair(currentParent!!.action, currentParent.g)
     }
