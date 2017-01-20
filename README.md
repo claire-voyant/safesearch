@@ -16,4 +16,6 @@ LSS-LRTA* - well-known real time search algorithm
 
 SZero - incorporating safety into LSS-LRTA* by backing up safety through parent pointers
 
+SOne  - same as SZero but backs up through all predecessors
+
 
