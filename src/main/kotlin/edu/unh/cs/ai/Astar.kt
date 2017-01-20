@@ -63,7 +63,7 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
     var maximumIterations = 10
 
     fun reachedTermination(): Boolean {
-        println("iteration count: $iterationCounter")
+//        println("iteration count: $iterationCounter")
         if (iterationCounter >= maximumIterations) {
             iterationCounter = 0
             return true

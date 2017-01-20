@@ -61,12 +61,20 @@ fun main(args: Array<String>) {
         } else if (args[1] == "-l") {
             runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt())
         }
-    } else if (args.size == 4) {
+    } else if (args.size >= 4) {
         if (args[1] == "-l" && args[2] == "-s") {
             if (args[3] == "-0") {
-                runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                if (args.size == 5) {
+                    runSZero(if (args[0] == "-g") startGridWorld else startVehicle, args[4].toInt())
+                } else {
+                    runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                }
             } else if (args[3] == "-1") {
-                runSOne(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                if (args.size == 5) {
+                    runSOne(if (args[0] == "-g") startGridWorld else startVehicle, args[4].toInt())
+                } else {
+                    runSOne(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                }
             }
         } else {
             runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt())

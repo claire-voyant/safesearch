@@ -8,10 +8,10 @@ import java.util.*
  * Created by doylew on 12/30/16
  */
 
-private val invalidVehicleState = VehicleState(Dimensions(-1, -1), Pair(-1, -1), Pair(-1, -1), ArrayList<Pair>(), ArrayList<Pair>(), ArrayList<Pair>())
+private val invalidVehicleState = VehicleState(Dimensions(-1, -1), Pair(-1, -1), Pair(-1, -1), HashMap<Pair, Obstacle>(), ArrayList<Pair>())
 
 class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalLocation: Pair,
-                   val obstacles: ArrayList<Pair>, val bunkers: ArrayList<Pair>, val obstacleVelocities: ArrayList<Pair>) : State<VehicleState>() {
+                   val obstacles: HashMap<Pair, Obstacle>, val bunkers: ArrayList<Pair>) : State<VehicleState>() {
 
 
     override fun hashCode(): Int {
@@ -21,9 +21,13 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
     override fun equals(other: Any?): Boolean {
         if (other is VehicleState) {
             if (other.agentLocation.x == agentLocation.x && agentLocation.y == other.agentLocation.y) {
-                if (other.obstacles.containsAll(obstacles)) {
-                    return true
+                var containsSameObstacles = true
+                other.obstacles.forEach { pair, obstacle ->
+                    if(other.obstacles[pair] != this.obstacles[pair]) {
+                        containsSameObstacles = false
+                    }
                 }
+                return containsSameObstacles
             }
         }
         return false
@@ -60,13 +64,13 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
     override fun successors(): ArrayList<Node<VehicleState>> {
         val successors = ArrayList<Node<VehicleState>>()
         val possibleActions = ArrayList<Action>(Action.values().asList())
-        println("Parent state: \n $this")
+//        println("Parent state: \n $this")
         possibleActions.forEach { action ->
             val candidateSuccessor = transition(action)
-            println("successor: $candidateSuccessor")
+//            println("successor: $candidateSuccessor")
             if (candidateSuccessor != null) {
-                candidateSuccessor.visualize()
-                println(action)
+//                candidateSuccessor.visualize()
+//                println(action)
                 if (candidateSuccessor.validState() && candidateSuccessor.nonNegativePosition()) {
                     successors.add(Node(null, candidateSuccessor, action, 0.0, 0.0, false, 0, 0.0))
                 }
@@ -98,20 +102,20 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
         return false
     }
 
-    fun moveObstacles(obstacles: ArrayList<Pair>): ArrayList<Pair> {
-        val newObstacles = ArrayList<Pair>(obstacles.size)
-        obstacles.forEachIndexed { i, pair ->
-            val oldObstaclePair = Pair(pair.x, pair.y)
-            val newObstaclePair = Pair(pair.x + obstacleVelocities[i].x, pair.y + obstacleVelocities[i].y)
-            if (bunkers.contains(newObstaclePair) || !validObstacleLocation(newObstaclePair) ||
-                    (goalLocation.x == newObstaclePair.x && goalLocation.y == newObstaclePair.y)) {
+    fun moveObstacles(obstacles: HashMap<Pair, Obstacle>): HashMap<Pair,Obstacle> {
+        val newObstacles = HashMap<Pair,Obstacle>()
+        obstacles.forEach { pair, obstacle ->
+            val oldObstaclePair = Obstacle(obstacle.x, obstacle.y, obstacle.dx, obstacle.dy)
+            val newObstaclePair = Obstacle(obstacle.x + obstacle.dx, obstacle.y + obstacle.dy, obstacle.dx, obstacle.dy)
+            val testPair = Pair(newObstaclePair.x, newObstaclePair.y)
+            if (bunkers.contains(testPair) || !validObstacleLocation(testPair) || (goalLocation == testPair)){
                 // if the new obstacle location would be a bunker
                 // add the old location and bounce the velocities
-                newObstacles.add(oldObstaclePair)
-                obstacleVelocities[i].x *= -1
-                obstacleVelocities[i].y *= -1
+                newObstacles[Pair(pair.x,pair.y)] = oldObstaclePair
+                oldObstaclePair.dx *= -1
+                oldObstaclePair.dy *= -1
             } else {
-                newObstacles.add(newObstaclePair)
+                newObstacles[Pair(pair.x + obstacle.dx, pair.y + obstacle.dy)] = newObstaclePair
             }
         }
         return newObstacles
@@ -124,7 +128,7 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
     override fun transition(action: Action): State<VehicleState>? {
 //        visualize()
         val movedObstacles = moveObstacles(obstacles)
-        val candidateState = VehicleState(dimension, Pair(agentLocation.x, agentLocation.y), goalLocation, movedObstacles, bunkers, obstacleVelocities)
+        val candidateState = VehicleState(dimension, Pair(agentLocation.x, agentLocation.y), goalLocation, movedObstacles, bunkers)
 //        candidateState.visualize()
 
         if (action == Action.NORTH) {
@@ -190,13 +194,12 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
         val copyAgentX = this.agentLocation.x
         val copyAgentY = this.agentLocation.y
         val copyAgentLocation = Pair(copyAgentX,copyAgentY)
-        val copyObstacles = arrayListOf<Pair>()
-        this.obstacles.forEach { obstacle ->
-            val copyObstacle = Pair(obstacle.x, obstacle.y)
-            copyObstacles.add(copyObstacle)
+        val copyObstacles = HashMap<Pair, Obstacle>()
+        this.obstacles.forEach { pair, obstacle ->
+            val copyObstacle = Obstacle(obstacle.x, obstacle.y, obstacle.dx, obstacle.dy)
+            copyObstacles[Pair(pair.x, pair.y)] = copyObstacle
         }
-        return VehicleState(this.dimension, copyAgentLocation, this.goalLocation, copyObstacles,
-                this.bunkers, this.obstacleVelocities)
+        return VehicleState(this.dimension, copyAgentLocation, this.goalLocation, copyObstacles, this.bunkers)
     }
 }
 //

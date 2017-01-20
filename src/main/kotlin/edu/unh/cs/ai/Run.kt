@@ -12,6 +12,7 @@ val timeLimit = 6000000
 
 fun <T> runSOne(start: State<T>, iterations: Int) {
     println("Running SZero!")
+    println("Expansion limit: $iterations")
     val runner = SafeLssLrtaStarRunner(start)
     var actionList: List<ActionBundle> //= listOf()
     var timeTaken: Long
@@ -35,14 +36,17 @@ fun <T> runSOne(start: State<T>, iterations: Int) {
                 actionList = listOf(actionList.first())
             }
             actionList.forEach {
-                println("State $currentState \t Action: $it")
-                currentState.visualize()
+
+                Thread.sleep(1000)
                 try {
                     currentState = currentState.transition(it.action)!!
                 } catch (e: Exception) {
                     println("Failed! Agent was slain.")
                     exitProcess(-1)
                 }
+
+                println("State $currentState \t Action: $it")
+                currentState.visualize()
                 actions.add(it.action)
             }
         }
@@ -63,7 +67,7 @@ fun <T> runSOne(start: State<T>, iterations: Int) {
     var numSafeNodes = 0
     runner.nodes.forEach { state, safeNode ->
         if (safeNode.safe) {
-            println(safeNode); ++numSafeNodes
+            /*println(safeNode);*/ ++numSafeNodes
         }
     }
     println("$numSafeNodes total safe nodes.")
@@ -73,6 +77,7 @@ fun <T> runSOne(start: State<T>, iterations: Int) {
 
 fun <T> runSZero(start: State<T>, iterations: Int) {
     println("Running SZero!")
+    println("Expansion limit: $iterations")
     val runner = SafeLssLrtaStarRunner(start)
     var actionList: List<ActionBundle> //= listOf()
     var timeTaken: Long
@@ -96,15 +101,17 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
                 actionList = listOf(actionList.first())
             }
             actionList.forEach {
-                println("State $currentState \t Action: $it")
-                currentState.visualize()
 
+                Thread.sleep(1000)
                 try {
                     currentState = currentState.transition(it.action)!!
                 } catch (e: Exception) {
                     println("Failed! Agent was slain.")
                     exitProcess(-1)
                 }
+
+                println("State $currentState \t Action: $it")
+                currentState.visualize()
                 actions.add(it.action)
             }
         }
@@ -125,7 +132,7 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
     var numSafeNodes = 0
     runner.nodes.forEach { state, safeNode ->
         if (safeNode.safe) {
-            println(safeNode); ++numSafeNodes
+            /*println(safeNode);*/ ++numSafeNodes
         }
     }
     println("$numSafeNodes total safe nodes.")
@@ -159,7 +166,7 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
             }
             actionList.forEach {
 
-                Thread.sleep(1000)
+//                Thread.sleep(1000)
                 try {
                     currentState = currentState.transition(it.action)!!
                 } catch (e: Exception) {
@@ -169,7 +176,6 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
 
                 println("State $currentState \t Action: $it")
                 currentState.visualize()
-                exitProcess(-1)
                 actions.add(it.action)
             }
         }
