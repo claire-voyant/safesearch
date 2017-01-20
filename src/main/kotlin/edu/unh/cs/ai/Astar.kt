@@ -64,8 +64,9 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
 
     fun reachedTermination(): Boolean {
 //        println("iteration count: $iterationCounter")
-        if (iterationCounter >= maximumIterations) {
+        if (nodesExpanded >= maximumIterations) {
             iterationCounter = 0
+            nodesExpanded = 0
             return true
         }
         return false
@@ -113,7 +114,6 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
 
     fun expandNode(sourceNode: Node<T>) {
         nodesExpanded++
-        iterationCounter++
         val currentGValue = sourceNode.g
         sourceNode.state.successors().forEach { successor: Node<T> ->
             val successorState = successor.state

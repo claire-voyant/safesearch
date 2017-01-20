@@ -68,8 +68,9 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
 
     fun reachedTermination(): Boolean {
 //        println("iteration count: $iterationCounter")
-        if (iterationCounter >= maximumIterations) {
+        if (nodesExpanded >= maximumIterations) {
             iterationCounter = 0
+            nodesExpanded = 0
             return true
         }
         return false
@@ -261,13 +262,26 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
 //        println("safe nodes: ${totalSafeNodes.size}")
     }
 
+    /** TODO be able to also pick a top level action which descended from a safe node*/
     private fun safeNodeOnOpen(): Pair<Action, Double> {
         val placeBackOnOpen = ArrayList<SafeNode<T>?>()
         var topOfOpen = openList.pop()
+        var hasSafeTopLevelActions = false
         placeBackOnOpen.add(topOfOpen)
         // pop off open until we find the safe node
-        while (!topOfOpen!!.safe && openList.isNotEmpty()) {
+        while (!hasSafeTopLevelActions && /*!topOfOpen!!.safe && */openList.isNotEmpty()) {
             topOfOpen = openList.pop()
+            // check if the top level action is safe
+            var currentParent = topOfOpen?.parent
+            if (currentParent != null && currentParent.parent != null) {
+                while (currentParent!!.parent!!.parent != null) {
+                    currentParent = currentParent.parent
+                    // find the top level action node
+                }
+            }
+            if (currentParent!!.safe) {
+                hasSafeTopLevelActions = true
+            }
             placeBackOnOpen.add(topOfOpen)
         }
         // if the open list is empty there is no
@@ -279,7 +293,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         // open list had something safe on it
         // travel up the parent of the first safe node
         // until we reach the root
-        var currentParent = topOfOpen.parent
+        var currentParent = topOfOpen?.parent
         if (currentParent != null && currentParent.parent != null) {
             while (currentParent!!.parent!!.parent != null) {
                 currentParent = currentParent.parent

@@ -41,7 +41,7 @@ fun main(args: Array<String>) {
         if (args[1] == "-a") {
             runAStar(if (args[0] == "-g") startGridWorld else startVehicle)
         } else if (args[1] == "-l") {
-            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+            runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, 100)
         } else if (args[1] == "-T") {
             if (args[0] == "-v") {
                 println("no tests for vehicle...exiting...")
@@ -57,7 +57,7 @@ fun main(args: Array<String>) {
         }
     } else if (args.size == 3) {
         if (args[1] == "-l" && args[2] == "-s") {
-            runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+            runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 100)
         } else if (args[1] == "-l") {
             runLssLrtaStar(if (args[0] == "-g") startGridWorld else startVehicle, args[2].toInt())
         }
@@ -67,13 +67,13 @@ fun main(args: Array<String>) {
                 if (args.size == 5) {
                     runSZero(if (args[0] == "-g") startGridWorld else startVehicle, args[4].toInt())
                 } else {
-                    runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                    runSZero(if (args[0] == "-g") startGridWorld else startVehicle, 100)
                 }
             } else if (args[3] == "-1") {
                 if (args.size == 5) {
                     runSOne(if (args[0] == "-g") startGridWorld else startVehicle, args[4].toInt())
                 } else {
-                    runSOne(if (args[0] == "-g") startGridWorld else startVehicle, 10)
+                    runSOne(if (args[0] == "-g") startGridWorld else startVehicle, 100)
                 }
             }
         } else {

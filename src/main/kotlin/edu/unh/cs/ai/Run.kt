@@ -10,8 +10,9 @@ import kotlin.system.measureTimeMillis
 
 val timeLimit = 6000000
 
+
 fun <T> runSOne(start: State<T>, iterations: Int) {
-    println("Running SZero!")
+    println("Running SOne!")
     println("Expansion limit: $iterations")
     val runner = SafeLssLrtaStarRunner(start)
     var actionList: List<ActionBundle> //= listOf()
@@ -37,7 +38,7 @@ fun <T> runSOne(start: State<T>, iterations: Int) {
             }
             actionList.forEach {
 
-                Thread.sleep(1000)
+//                Thread.sleep(1000)
                 try {
                     currentState = currentState.transition(it.action)!!
                 } catch (e: Exception) {
@@ -45,8 +46,8 @@ fun <T> runSOne(start: State<T>, iterations: Int) {
                     exitProcess(-1)
                 }
 
-                println("State $currentState \t Action: $it")
-                currentState.visualize()
+//                println("State $currentState \t Action: $it")
+//                currentState.visualize()
                 actions.add(it.action)
             }
         }
@@ -56,14 +57,14 @@ fun <T> runSOne(start: State<T>, iterations: Int) {
             println("Failed!")
             exitProcess(-1)
         }
-        println(currentState)
+//        println(currentState)
     }
     val pathLength = actions.size
     println("$pathLength Actions taken:")
     actions.forEach(::println)
     println("Final state: ")
-    println(currentState)
-    println("Safe Nodes: ")
+//    println(currentState)
+//    println("Safe Nodes: ")
     var numSafeNodes = 0
     runner.nodes.forEach { state, safeNode ->
         if (safeNode.safe) {
@@ -102,7 +103,7 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
             }
             actionList.forEach {
 
-                Thread.sleep(1000)
+//                Thread.sleep(1000)
                 try {
                     currentState = currentState.transition(it.action)!!
                 } catch (e: Exception) {
@@ -110,8 +111,8 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
                     exitProcess(-1)
                 }
 
-                println("State $currentState \t Action: $it")
-                currentState.visualize()
+//                println("State $currentState \t Action: $it")
+//                currentState.visualize()
                 actions.add(it.action)
             }
         }
@@ -121,14 +122,14 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
             println("Failed!")
             exitProcess(-1)
         }
-        println(currentState)
+//        println(currentState)
     }
     val pathLength = actions.size
     println("$pathLength Actions taken:")
     actions.forEach(::println)
     println("Final state: ")
-    println(currentState)
-    println("Safe Nodes: ")
+//    println(currentState)
+//    println("Safe Nodes: ")
     var numSafeNodes = 0
     runner.nodes.forEach { state, safeNode ->
         if (safeNode.safe) {
@@ -174,8 +175,8 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
                     exitProcess(-1)
                 }
 
-                println("State $currentState \t Action: $it")
-                currentState.visualize()
+//                println("State $currentState \t Action: $it")
+//                currentState.visualize()
                 actions.add(it.action)
             }
         }
@@ -191,7 +192,7 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
     println("$pathLength Actions taken:")
     actions.forEach(::println)
     println("Final state: ")
-    println(currentState)
+//    println(currentState)
     println("Time taken: $totalTime ms")
 }
 

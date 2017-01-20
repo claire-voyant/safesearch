@@ -14,7 +14,7 @@ data class Pair(var x: Int, var y: Int) {
     }
 
     override fun hashCode(): Int {
-        return x xor y
+        return x xor Integer.rotateLeft(y, 8)
     }
 }
 data class Obstacle(var x: Int, var y: Int, var dx: Int, var dy: Int) {
@@ -26,7 +26,7 @@ data class Obstacle(var x: Int, var y: Int, var dx: Int, var dy: Int) {
     }
 
     override fun hashCode(): Int {
-        return x xor y xor dx xor dy
+        return x xor Integer.rotateLeft(y,8) xor dx xor Integer.rotateLeft(dy,24)
     }
 }
 data class Dimensions(val width: Int, val height: Int)
