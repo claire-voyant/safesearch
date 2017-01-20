@@ -8,7 +8,7 @@ import java.util.*
  * Created by doylew on 1/9/17.
  */
 
-private val invalidState = GridWorldState(Dimensions(-1, -1), Pair(-1, -1), Pair(-1, -1), ArrayList<Pair>())
+private val invalidGridState = GridWorldState(Dimensions(-1, -1), Pair(-1, -1), Pair(-1, -1), ArrayList<Pair>())
 
 class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goalLocation: Pair, val obstacles: ArrayList<Pair>)
     : State<GridWorldState>() {
@@ -34,6 +34,10 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
         return isGoal()
     }
 
+    override fun copy(): State<GridWorldState> {
+        throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun visualize(): Unit {
         (0..dimension.height - 1).forEach { y ->
             (0..dimension.width - 1).forEach { x ->
@@ -50,6 +54,10 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
             println()
         }
         println()
+    }
+
+    override fun nonNegativePosition(): Boolean {
+        return this.agentLocation.x != -1 && this.agentLocation.y != -1
     }
 
     override fun transition(action: Action): State<GridWorldState> {
@@ -79,7 +87,7 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
                 return candidateState
             }
         }
-        return invalidState
+        return invalidGridState
     }
 
     override fun heuristic(): Double {
@@ -92,7 +100,7 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
         val possibleActions = ArrayList<Action>(Action.values().asList())
         possibleActions.forEach {
             val candidateSuccessor = transition(it)
-            if (invalidState != candidateSuccessor) {
+            if (candidateSuccessor.validState() && nonNegativePosition()) {
                 successors.add(Node(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0))
             }
         }
@@ -104,7 +112,7 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
         val possibleActions = ArrayList<Action>(Action.values().asList())
         possibleActions.forEach {
             val candidateSuccessor = transition(it)
-            if (invalidState != candidateSuccessor) {
+            if (candidateSuccessor.validState() && nonNegativePosition()) {
                 successors.add(SafeNode(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0, isSafe()))
             }
         }
@@ -112,7 +120,7 @@ class GridWorldState(val dimension: Dimensions, val agentLocation: Pair, val goa
     }
 
     override fun isGoal(): Boolean {
-        if (this != invalidState) {
+        if (this != invalidGridState && this.validState()) {
             if (agentLocation.x == goalLocation.x && agentLocation.y == goalLocation.y) {
                 return true
             }

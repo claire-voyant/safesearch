@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
     println("provide problem in standard input < [PROBLEM-FILE]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
 
-    val inputFile = Scanner(System.`in`)
+    val inputFile = Scanner(File("./input/vehicle/vehicle0.v"))
     var startGridWorld: State<GridWorldState> = initializeDummyGridWorld()
     var startVehicle: State<VehicleState> = initializeDummyVehicle()
     if (args[0] == "-g") {
@@ -36,7 +36,7 @@ fun main(args: Array<String>) {
         exitProcess(-1)
     }
     println("Given problem: ")
-    if (args[0] == "-g") startGridWorld.visualize() else startVehicle.visualize()
+    if (args[0] == "-g") println(startGridWorld) else println(startVehicle)
     if (args.size == 2) {
         if (args[1] == "-a") {
             runAStar(if (args[0] == "-g") startGridWorld else startVehicle)

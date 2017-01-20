@@ -8,10 +8,11 @@ import java.util.*
  * Created by doylew on 12/30/16
  */
 
-private val invalidState = VehicleState(Dimensions(-1, -1), Pair(-1, -1), Pair(-1, -1), ArrayList<Pair>(), ArrayList<Pair>(), ArrayList<Pair>())
+private val invalidVehicleState = VehicleState(Dimensions(-1, -1), Pair(-1, -1), Pair(-1, -1), ArrayList<Pair>(), ArrayList<Pair>(), ArrayList<Pair>())
 
 class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalLocation: Pair,
                    val obstacles: ArrayList<Pair>, val bunkers: ArrayList<Pair>, val obstacleVelocities: ArrayList<Pair>) : State<VehicleState>() {
+
 
     override fun hashCode(): Int {
         return agentLocation.hashCode() xor obstacles.hashCode()
@@ -40,12 +41,15 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
     }
 
     override fun heuristic(): Double {
+        if (this.agentLocation.x == -1) {
+            return kotlin.Double.MAX_VALUE
+        }
         return ((Math.abs(agentLocation.x - goalLocation.x)) +
                 (Math.abs(agentLocation.y - goalLocation.y))).toDouble()
     }
 
     override fun isGoal(): Boolean {
-        if (this != invalidState) {
+        if (this != invalidVehicleState && this.validState()) {
             if (agentLocation.x == goalLocation.x && agentLocation.y == goalLocation.y) {
                 return true
             }
@@ -56,10 +60,16 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
     override fun successors(): ArrayList<Node<VehicleState>> {
         val successors = ArrayList<Node<VehicleState>>()
         val possibleActions = ArrayList<Action>(Action.values().asList())
-        possibleActions.forEach {
-            val candidateSuccessor = transition(it)
-            if (invalidState != candidateSuccessor) {
-                successors.add(Node(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0))
+        println("Parent state: \n $this")
+        possibleActions.forEach { action ->
+            val candidateSuccessor = transition(action)
+            println("successor: $candidateSuccessor")
+            if (candidateSuccessor != null) {
+                candidateSuccessor.visualize()
+                println(action)
+                if (candidateSuccessor.validState() && candidateSuccessor.nonNegativePosition()) {
+                    successors.add(Node(null, candidateSuccessor, action, 0.0, 0.0, false, 0, 0.0))
+                }
             }
         }
         return successors
@@ -70,8 +80,10 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
         val possibleActions = ArrayList<Action>(Action.values().asList())
         possibleActions.forEach {
             val candidateSuccessor = transition(it)
-            if (invalidState != candidateSuccessor) {
-                successors.add(SafeNode(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0, candidateSuccessor.isSafe()))
+            if (candidateSuccessor != null) {
+                if (candidateSuccessor.validState() && candidateSuccessor.nonNegativePosition()) {
+                    successors.add(SafeNode(null, candidateSuccessor, it, 0.0, 0.0, false, 0, 0.0, candidateSuccessor.isSafe()))
+                }
             }
         }
         return successors
@@ -105,7 +117,11 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
         return newObstacles
     }
 
-    override fun transition(action: Action): State<VehicleState> {
+    override fun nonNegativePosition(): Boolean {
+        return this.agentLocation.x != -1 && this.agentLocation.y != -1
+    }
+
+    override fun transition(action: Action): State<VehicleState>? {
 //        visualize()
         val movedObstacles = moveObstacles(obstacles)
         val candidateState = VehicleState(dimension, Pair(agentLocation.x, agentLocation.y), goalLocation, movedObstacles, bunkers, obstacleVelocities)
@@ -136,7 +152,7 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
                 return candidateState
             }
         }
-        return invalidState
+        return null//invalidVehicleState
     }
 
     override fun validState(): Boolean {
@@ -168,6 +184,19 @@ class VehicleState(val dimension: Dimensions, val agentLocation: Pair, val goalL
             println()
         }
         println()
+    }
+
+    override fun copy(): State<VehicleState> {
+        val copyAgentX = this.agentLocation.x
+        val copyAgentY = this.agentLocation.y
+        val copyAgentLocation = Pair(copyAgentX,copyAgentY)
+        val copyObstacles = arrayListOf<Pair>()
+        this.obstacles.forEach { obstacle ->
+            val copyObstacle = Pair(obstacle.x, obstacle.y)
+            copyObstacles.add(copyObstacle)
+        }
+        return VehicleState(this.dimension, copyAgentLocation, this.goalLocation, copyObstacles,
+                this.bunkers, this.obstacleVelocities)
     }
 }
 //

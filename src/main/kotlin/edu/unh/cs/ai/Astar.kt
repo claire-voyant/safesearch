@@ -63,7 +63,8 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
     var maximumIterations = 10
 
     fun reachedTermination(): Boolean {
-        if (iterationCounter == maximumIterations) {
+        println("iteration count: $iterationCounter")
+        if (iterationCounter >= maximumIterations) {
             iterationCounter = 0
             return true
         }
@@ -95,7 +96,7 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
 //        aStarPopCounter = 0
 //        dijkstraPopCounter = 0
 //        aStarTimer = 0L
-//        dijkstraTimer = 0L
+//        dijkstraTimer = 0L/
 //        clearOpenList()
 //    }
 
@@ -112,6 +113,7 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
 
     fun expandNode(sourceNode: Node<T>) {
         nodesExpanded++
+        iterationCounter++
         val currentGValue = sourceNode.g
         sourceNode.state.successors().forEach { successor: Node<T> ->
             val successorState = successor.state

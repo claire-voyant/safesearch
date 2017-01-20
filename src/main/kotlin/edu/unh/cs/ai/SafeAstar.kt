@@ -67,7 +67,8 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
     var maximumIterations = 10
 
     fun reachedTermination(): Boolean {
-        if (iterationCounter == maximumIterations) {
+        println("iteration count: $iterationCounter")
+        if (iterationCounter >= maximumIterations) {
             iterationCounter = 0
             return true
         }

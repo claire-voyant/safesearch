@@ -12,9 +12,11 @@ interface Expandable<T> {
     fun successors() : ArrayList<Node<T>>
     fun safe_successors() : ArrayList<SafeNode<T>>
     fun isGoal() : Boolean
-    fun transition(action: Action) : State<T>
+    fun transition(action: Action) : State<T>?
     fun validState() : Boolean
     fun isSafe() : Boolean
+    fun nonNegativePosition() : Boolean
+    fun copy() : State<T>
 }
 
 interface Visual<T> {

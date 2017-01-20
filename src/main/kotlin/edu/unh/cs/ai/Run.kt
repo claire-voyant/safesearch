@@ -8,6 +8,8 @@ import kotlin.system.measureTimeMillis
  * Created by willi on 1/5/2017.
  */
 
+val timeLimit = 6000000
+
 fun <T> runSOne(start: State<T>, iterations: Int) {
     println("Running SZero!")
     val runner = SafeLssLrtaStarRunner(start)
@@ -26,30 +28,37 @@ fun <T> runSOne(start: State<T>, iterations: Int) {
             try {
                 actionList = runner.selectAction(currentState)
             } catch (e: Exception) {
-                println("Failed!")
+                println("Failed! ${e.message}")
                 exitProcess(-1)
             }
             if (actionList.size > 1 && singleStepLookahead) {
                 actionList = listOf(actionList.first())
             }
             actionList.forEach {
-                currentState = currentState.transition(it.action)
+                println("State $currentState \t Action: $it")
+                currentState.visualize()
+                try {
+                    currentState = currentState.transition(it.action)!!
+                } catch (e: Exception) {
+                    println("Failed! Agent was slain.")
+                    exitProcess(-1)
+                }
                 actions.add(it.action)
             }
         }
         totalTime += timeTaken
-//        if (60 <= (totalTime / 1000)) {
-//            System.err.println("Exceeded allowed time, exiting...")
-//            System.err.println("Failed!")
-//            exitProcess(-1)
-//        }
-        currentState.visualize()
+        if (timeLimit <= (totalTime / 1000)) {
+            System.err.println("Exceeded allowed time, exiting...")
+            println("Failed!")
+            exitProcess(-1)
+        }
+        println(currentState)
     }
     val pathLength = actions.size
     println("$pathLength Actions taken:")
     actions.forEach(::println)
     println("Final state: ")
-    currentState.visualize()
+    println(currentState)
     println("Safe Nodes: ")
     var numSafeNodes = 0
     runner.nodes.forEach { state, safeNode ->
@@ -80,30 +89,38 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
             try {
                 actionList = runner.selectAction(currentState)
             } catch (e: Exception) {
-                println("Failed!")
+                println("Failed! ${e.message}")
                 exitProcess(-1)
             }
             if (actionList.size > 1 && singleStepLookahead) {
                 actionList = listOf(actionList.first())
             }
             actionList.forEach {
-                currentState = currentState.transition(it.action)
+                println("State $currentState \t Action: $it")
+                currentState.visualize()
+
+                try {
+                    currentState = currentState.transition(it.action)!!
+                } catch (e: Exception) {
+                    println("Failed! Agent was slain.")
+                    exitProcess(-1)
+                }
                 actions.add(it.action)
             }
         }
         totalTime += timeTaken
-//        if (60 <= (totalTime / 1000)) {
-//            System.err.println("Exceeded allowed time, exiting...")
-//            System.err.println("Failed!")
-//            exitProcess(-1)
-//        }
-        currentState.visualize()
+        if (timeLimit <= (totalTime / 1000)) {
+            System.err.println("Exceeded allowed time, exiting...")
+            println("Failed!")
+            exitProcess(-1)
+        }
+        println(currentState)
     }
     val pathLength = actions.size
     println("$pathLength Actions taken:")
     actions.forEach(::println)
     println("Final state: ")
-    currentState.visualize()
+    println(currentState)
     println("Safe Nodes: ")
     var numSafeNodes = 0
     runner.nodes.forEach { state, safeNode ->
@@ -118,6 +135,7 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
 
 fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
     println("Running LssLrtaStar!")
+    println("Expansion limit: $iterations")
     val runner = LssLrtaStarRunner(start)
     var actionList: List<ActionBundle> //= listOf()
     var timeTaken: Long
@@ -127,36 +145,47 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
     val actions: MutableList<Action> = arrayListOf()
     runner.maximumIterations = iterations
 
-    var currentState = start
+    var currentState = start.copy()
     while (!currentState.isGoal()) {
         timeTaken = measureTimeMillis {
             try {
                 actionList = runner.selectAction(currentState)
             } catch (e: Exception) {
-                println("Failed!")
+                println("Failed! ${e.message}")
                 exitProcess(-1)
             }
             if (actionList.size > 1 && singleStepLookahead) {
                 actionList = listOf(actionList.first()) // Trim the action list to one item
             }
             actionList.forEach {
-                currentState = currentState.transition(it.action)
+
+                Thread.sleep(1000)
+                try {
+                    currentState = currentState.transition(it.action)!!
+                } catch (e: Exception) {
+                    println("Failed! Agent was slain.")
+                    exitProcess(-1)
+                }
+
+                println("State $currentState \t Action: $it")
+                currentState.visualize()
+                exitProcess(-1)
                 actions.add(it.action)
             }
         }
         totalTime += timeTaken
-//        if (60 <= (totalTime / 1000)) {
-//            System.err.println("Exceeded allowed time, exiting...")
-//            exitProcess(-1)
-//        }
-        currentState.visualize()
+        if (timeLimit <= (totalTime / 1000)) {
+            System.err.println("Exceeded allowed time, exiting...")
+            println("Failed!")
+            exitProcess(-1)
+        }
 //        println("Agent return actions: |${actionList.size}| to state $currentState")
     }
     val pathLength = actions.size
     println("$pathLength Actions taken:")
     actions.forEach(::println)
     println("Final state: ")
-    currentState.visualize()
+    println(currentState)
     println("Time taken: $totalTime ms")
 }
 
@@ -176,14 +205,14 @@ fun <T> runAStar(start: State<T>) {
             try {
                 actionList = runner.selectAction(currentState)
             } catch (e: Exception) {
-                println("Failed!")
+                println("Failed! ${e.message}")
                 exitProcess(-1)
             }
             if (actionList.size > 1 && singleStepLookahead) {
                 actionList = listOf(actionList.first()) // Trim the action list to one item
             }
             actionList.forEach {
-                currentState = currentState.transition(it.action)
+                currentState = currentState.transition(it.action)!!
                 actions.add(it.action)
 
             }
