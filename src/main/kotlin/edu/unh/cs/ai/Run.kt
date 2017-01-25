@@ -8,7 +8,7 @@ import kotlin.system.measureTimeMillis
  * Created by willi on 1/5/2017.
  */
 
-val timeLimit = 6000000
+val timeLimit = 600 // ten minutes
 
 
 fun <T> runSOne(start: State<T>, iterations: Int) {
@@ -53,8 +53,7 @@ fun <T> runSOne(start: State<T>, iterations: Int) {
         }
         totalTime += timeTaken
         if (timeLimit <= (totalTime / 1000)) {
-            System.err.println("Exceeded allowed time, exiting...")
-            println("Failed!")
+            println("Failed! Exceeded allowed time, exiting...")
             exitProcess(-1)
         }
 //        println(currentState)
@@ -118,8 +117,7 @@ fun <T> runSZero(start: State<T>, iterations: Int) {
         }
         totalTime += timeTaken
         if (timeLimit <= (totalTime / 1000)) {
-            System.err.println("Exceeded allowed time, exiting...")
-            println("Failed!")
+            println("Failed! Exceeded allowed time, exiting...")
             exitProcess(-1)
         }
 //        println(currentState)
@@ -157,7 +155,9 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
     while (!currentState.isGoal()) {
         timeTaken = measureTimeMillis {
             try {
+                println("forming list...")
                 actionList = runner.selectAction(currentState)
+                println("list formed...")
             } catch (e: Exception) {
                 println("Failed! ${e.message}")
                 exitProcess(-1)
@@ -182,8 +182,7 @@ fun <T> runLssLrtaStar(start: State<T>, iterations: Int) {
         }
         totalTime += timeTaken
         if (timeLimit <= (totalTime / 1000)) {
-            System.err.println("Exceeded allowed time, exiting...")
-            println("Failed!")
+            println("Failed! Exeeded allowed time, exiting...")
             exitProcess(-1)
         }
 //        println("Agent return actions: |${actionList.size}| to state $currentState")

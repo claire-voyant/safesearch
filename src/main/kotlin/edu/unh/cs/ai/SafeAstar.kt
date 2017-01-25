@@ -262,8 +262,8 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
 //        println("safe nodes: ${totalSafeNodes.size}")
     }
 
-    /** TODO be able to also pick a top level action which descended from a safe node*/
-    private fun safeNodeOnOpen(): Pair<Action, Double> {
+    /** TODO make sure the node picked is correct action...*/
+    private fun safeNodeOnOpen(): Pair<SafeNode<T>, Double> {
         val placeBackOnOpen = ArrayList<SafeNode<T>?>()
         var topOfOpen = openList.pop()
         var hasSafeTopLevelActions = false
@@ -288,17 +288,17 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         // safe node on open to travel up
         // return -1 and do what LSS does
         if (openList.isEmpty()) {
-            return Pair(Action.START, -1.0)
+            return Pair(topOfOpen!!, -1.0)
         }
         // open list had something safe on it
         // travel up the parent of the first safe node
         // until we reach the root
-        var currentParent = topOfOpen?.parent
-        if (currentParent != null && currentParent.parent != null) {
-            while (currentParent!!.parent!!.parent != null) {
-                currentParent = currentParent.parent
-            }
-        }
+//        var currentParent = topOfOpen?.parent
+//        if (currentParent != null && currentParent.parent != null) {
+//            while (currentParent!!.parent!!.parent != null) {
+//                currentParent = currentParent.parent
+//            }
+//        }
         // place all of our nodes back onto open
         // make sure open list is ordered appropriately
         // for the next iteration
@@ -312,7 +312,7 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         // for the next iteration
 //        println("open list? : ${openList.isEmpty()}")
         openList.reorder(fComparator)
-        return Pair(currentParent!!.action, currentParent.g)
+        return Pair(topOfOpen!!, topOfOpen.g)
     }
 
     private fun extractPlan(targetNode: SafeNode<T>, sourceState: State<T>): List<ActionBundle> {
@@ -322,17 +322,17 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         if (targetNode.state == sourceState) {
             return emptyList()
         }
-        var done = 0
+
+        val safestNodeOnOpen: Pair<SafeNode<T>, Double> = safeNodeOnOpen()
+
+        if (safestNodeOnOpen.second != -1.0) {
+           currentNode = safestNodeOnOpen.first
+        }
+
         do {
-            val safestNodeOnOpen: Pair<Action, Double> = safeNodeOnOpen()
-            if (safestNodeOnOpen.second == -1.0) { // -1.0 means no safe node on open do what lss does...
-                actions.add(ActionBundle(currentNode.action, currentNode.g))
-            } else {
-                actions.add(ActionBundle(safestNodeOnOpen.first, safestNodeOnOpen.second))
-            }
-            done++
+            actions.add(ActionBundle(currentNode.action, currentNode.g))
             currentNode = currentNode?.parent!!
-        } while (/*currentNode.state != sourceState || */ done < 0)
+        } while (currentNode.state != sourceState)
 
         return actions.reversed()
     }
@@ -352,7 +352,9 @@ data class SafeLssLrtaStarRunner<T>(val start: State<T>) {
         // Exploration phase
         var plan: List<ActionBundle>? = null
         aStarTimer += measureTimeMillis {
+            println("started A* expansion @ $aStarTimer")
             val targetNode = aStar(state)
+            println("extracting plan @ $aStarTimer")
             updateSafeNodes()
 
             plan = extractPlan(targetNode, state)

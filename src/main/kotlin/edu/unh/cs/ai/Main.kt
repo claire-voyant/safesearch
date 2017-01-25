@@ -9,7 +9,7 @@ import kotlin.system.exitProcess
  * Created by willi on 12/16/2016.
  */
 
-val random = Random()
+val random = Random(kotlin.Long.MAX_VALUE)
 
 
 fun main(args: Array<String>) {
@@ -18,11 +18,11 @@ fun main(args: Array<String>) {
     println("arg1: -g [GRIDWORLD] | -v [VEHICLE]")
     println("arg2: -a [ASTAR] | -l [LSSLRTASTAR] | -T [RUN_TESTS]")
     println("arg3: [ITERATIONS] | -s [SAFETY_FLAG]")
-    println("arg4: [VERSION = 0.0 1.0]")
+    println("arg4: [VERSION = 0.0 [-0] 1.0 [-1]")
     println("provide problem in standard input < [PROBLEM-FILE]")
     args.forEachIndexed { i, s -> println("\t[$i] $s") }
 
-    val inputFile = Scanner(File("./input/vehicle/vehicle0.v"))
+    val inputFile = Scanner(System.`in`)
     var startGridWorld: State<GridWorldState> = initializeDummyGridWorld()
     var startVehicle: State<VehicleState> = initializeDummyVehicle()
     if (args[0] == "-g") {

@@ -85,6 +85,7 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
             while (!reachedTermination() && !currentNode.state.isGoal()) {
                 aStarPopCounter++
                 currentNode = popOpenList()
+//                println("$nodesExpanded in current iteration...")
                 expandNode(currentNode)
             }
         }
@@ -254,7 +255,9 @@ data class LssLrtaStarRunner<T>(val start: State<T>) {
         // Exploration phase
         var plan: List<ActionBundle>? = null
         aStarTimer += measureTimeMillis {
+            println("started A* expansion @ $aStarTimer ms")
             val targetNode = aStar(state)
+            println("extracting plan @ $aStarTimer ms")
             plan = extractPlan(targetNode, state)
             rootState = targetNode.state
         }
